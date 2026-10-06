@@ -1,0 +1,316 @@
+{
+  "zaverecna_prace (1).pdf": {
+    "pdf": {
+      "pageSize": { "valid": true, "message": "OK", "details": [] },
+      "marginLeftMm": {
+        "valid": false,
+        "message": "nevalidní (40.0 mm)",
+        "details": {
+          "detected": 40.01205555555557,
+          "expected": 35,
+          "count": 48,
+          "distribution": [
+            { "average": 40.01205555555557, "count": 48 },
+            { "average": 35.01813333333333, "count": 10 }
+          ]
+        }
+      },
+      "fontFamily": {
+        "valid": true,
+        "message": "OK",
+        "details": { "Times New Roman": 227, "SymbolMT": 3 }
+      },
+      "fontSize": {
+        "valid": true,
+        "message": "OK",
+        "details": { "expected": 12, "detected": 12.48 }
+      },
+      "lineSpacing": {
+        "valid": false,
+        "message": "nevalidní (1.31)",
+        "details": {
+          "fontSize": 12.48,
+          "expectedLineSpacing": 20.592,
+          "detected": 18,
+          "count": 711
+        }
+      },
+      "maxFileSizeInMb": { "valid": true, "message": "OK" },
+      "chapterStartsNewPage": {
+        "valid": true,
+        "message": "Všechny hlavní kapitoly začínají na nové stránce.",
+        "details": {
+          "chapters": [
+            {
+              "chapter": "2 Cíl práce a metodika",
+              "page": 11,
+              "topDistance": 83.65999999999997
+            },
+            {
+              "chapter": "3 Teoretická východiska",
+              "page": 12,
+              "topDistance": 83.65999999999997
+            },
+            {
+              "chapter": "4 Vlastní práce",
+              "page": 34,
+              "topDistance": 83.65999999999997
+            },
+            {
+              "chapter": "5 Závěr",
+              "page": 56,
+              "topDistance": 83.65999999999997
+            },
+            {
+              "chapter": "6 Seznam použitých zdrojů",
+              "page": 58,
+              "topDistance": 83.65999999999997
+            }
+          ],
+          "violations": [],
+          "threshold": 120
+        }
+      }
+    }
+  },
+  "zaverecna_prace (2).pdf": {
+    "pdf": {
+      "pageSize": { "valid": true, "message": "OK", "details": [] },
+      "marginLeftMm": {
+        "valid": true,
+        "message": "OK (35.1 mm)",
+        "details": {
+          "detected": 35.068933333333305,
+          "expected": 35,
+          "count": 41,
+          "distribution": [
+            { "average": 35.068933333333305, "count": 41 },
+            { "average": 110.19366666666666, "count": 1 }
+          ]
+        }
+      },
+      "fontFamily": {
+        "valid": true,
+        "message": "OK",
+        "details": { "Times New Roman": 150, "Calibri": 35, "ArialMT": 4 }
+      },
+      "fontSize": {
+        "valid": true,
+        "message": "OK",
+        "details": { "expected": 12, "detected": 12 }
+      },
+      "lineSpacing": { "valid": true, "message": "OK", "details": null },
+      "maxFileSizeInMb": { "valid": true, "message": "OK" },
+      "chapterStartsNewPage": {
+        "valid": true,
+        "message": "Všechny hlavní kapitoly začínají na nové stránce.",
+        "details": {
+          "chapters": [
+            {
+              "chapter": "2 Seznam použitých zkratek",
+              "page": 12,
+              "topDistance": 69.86000000000001
+            },
+            {
+              "chapter": "3 Úvod",
+              "page": 13,
+              "topDistance": 69.86000000000001
+            },
+            {
+              "chapter": "4 Cíl práce",
+              "page": 14,
+              "topDistance": 69.86000000000001
+            },
+            {
+              "chapter": "5 Literární rešerše",
+              "page": 15,
+              "topDistance": 69.86000000000001
+            },
+            {
+              "chapter": "6 Metodika",
+              "page": 28,
+              "topDistance": 69.86000000000001
+            },
+            {
+              "chapter": "7 Výsledky",
+              "page": 31,
+              "topDistance": 69.86000000000001
+            },
+            {
+              "chapter": "8 Diskuze",
+              "page": 39,
+              "topDistance": 69.86000000000001
+            },
+            {
+              "chapter": "9 Závěr",
+              "page": 41,
+              "topDistance": 69.86000000000001
+            },
+            {
+              "chapter": "10 Seznam použité literatury",
+              "page": 42,
+              "topDistance": 69.86000000000001
+            }
+          ],
+          "violations": [],
+          "threshold": 120
+        }
+      }
+    }
+  },
+  "zaverecna_prace (7).pdf": {
+    "pdf": {
+      "pageSize": { "valid": true, "message": "OK", "details": [] },
+      "marginLeftMm": {
+        "valid": false,
+        "message": "nevalidní (15.0 mm)",
+        "details": {
+          "detected": 15.028333333333334,
+          "expected": 35,
+          "count": 19,
+          "distribution": [
+            { "average": 15.028333333333334, "count": 19 },
+            { "average": 35.005682352941164, "count": 17 },
+            { "average": 25.019, "count": 1 },
+            { "average": 27.728333333333328, "count": 1 },
+            { "average": 47.50505555555555, "count": 1 }
+          ]
+        }
+      },
+      "fontFamily": {
+        "valid": true,
+        "message": "OK",
+        "details": {
+          "Times New Roman": 157,
+          "CambriaMath": 3,
+          "Calibri-Italic": 1
+        }
+      },
+      "fontSize": {
+        "valid": true,
+        "message": "OK",
+        "details": { "expected": 12, "detected": 12 }
+      },
+      "lineSpacing": { "valid": true, "message": "OK", "details": null },
+      "maxFileSizeInMb": { "valid": true, "message": "OK" },
+      "chapterStartsNewPage": {
+        "valid": true,
+        "message": "Všechny hlavní kapitoly začínají na nové stránce.",
+        "details": { "chapters": [], "violations": [], "threshold": 120 }
+      }
+    }
+  },
+  "zaverecna_prace (8).pdf": {
+    "pdf": {
+      "pageSize": { "valid": true, "message": "OK", "details": [] },
+      "marginLeftMm": {
+        "valid": false,
+        "message": "nevalidní (25.0 mm)",
+        "details": {
+          "detected": 24.985133333333344,
+          "expected": 35,
+          "count": 43,
+          "distribution": [
+            { "average": 24.985133333333344, "count": 43 },
+            { "average": 37.47205555555555, "count": 2 }
+          ]
+        }
+      },
+      "fontFamily": {
+        "valid": true,
+        "message": "OK",
+        "details": {
+          "Times New Roman": 166,
+          "Calibri-Light": 1,
+          "Calibri": 49,
+          "Calibri-Bold": 4,
+          "Calibri-Italic": 5,
+          "Calibri-BoldItalic": 3
+        }
+      },
+      "fontSize": {
+        "valid": true,
+        "message": "OK",
+        "details": { "expected": 12, "detected": 12 }
+      },
+      "lineSpacing": { "valid": true, "message": "OK", "details": null },
+      "maxFileSizeInMb": { "valid": true, "message": "OK" },
+      "chapterStartsNewPage": {
+        "valid": false,
+        "message": "4 hlavních kapitol nezačíná na nové stránce.",
+        "details": {
+          "chapters": [
+            {
+              "chapter": "2. Cíle práce",
+              "page": 11,
+              "topDistance": 69.7399999999999
+            },
+            {
+              "chapter": "3. Tesařík alpský – deštníkový druh",
+              "page": 12,
+              "topDistance": 102.49999999999989
+            },
+            {
+              "chapter": "4. Vliv oslunění",
+              "page": 20,
+              "topDistance": 382.87
+            },
+            {
+              "chapter": "6. Metodika",
+              "page": 24,
+              "topDistance": 151.81999999999994
+            },
+            {
+              "chapter": "7. Výsledky",
+              "page": 31,
+              "topDistance": 69.7399999999999
+            },
+            {
+              "chapter": "8. Diskuse",
+              "page": 38,
+              "topDistance": 456.90999999999997
+            },
+            {
+              "chapter": "9. Závěr",
+              "page": 40,
+              "topDistance": 275.44999999999993
+            },
+            {
+              "chapter": "10. Citace",
+              "page": 41,
+              "topDistance": 69.7399999999999
+            },
+            {
+              "chapter": "11. Přílohy",
+              "page": 46,
+              "topDistance": 69.98000000000002
+            }
+          ],
+          "violations": [
+            {
+              "chapter": "4. Vliv oslunění",
+              "page": 20,
+              "topDistance": 382.87
+            },
+            {
+              "chapter": "6. Metodika",
+              "page": 24,
+              "topDistance": 151.81999999999994
+            },
+            {
+              "chapter": "8. Diskuse",
+              "page": 38,
+              "topDistance": 456.90999999999997
+            },
+            {
+              "chapter": "9. Závěr",
+              "page": 40,
+              "topDistance": 275.44999999999993
+            }
+          ],
+          "threshold": 120
+        }
+      }
+    }
+  }
+}

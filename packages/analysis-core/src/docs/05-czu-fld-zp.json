@@ -1,0 +1,562 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "czu.fld.zaverecna_prace",
+  "institution": {
+    "university": "Česká zemědělská univerzita v Praze",
+    "faculty": "Fakulta lesnická a dřevařská",
+    "faculty_code": "FLD",
+    "work_type": "závěrečná práce"
+  },
+  "year": 2025,
+  "valid_from_academic_year": "2025/2026",
+  "source_document": {
+    "filename": "czu-fld-zp-2025(1).pdf",
+    "governing_decree": "Nařízení děkana č. 8/2025"
+  },
+  "rules": [
+    {
+      "rule_id": "assignment.profile_alignment",
+      "definition": "assignment.alignment",
+      "severity": "error",
+      "parameters": {
+        "require_topic_alignment_with_study_program": true
+      }
+    },
+    {
+      "rule_id": "structure.required_order",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "order": [
+          "covers_and_title_page",
+          "assignment",
+          "author_declaration",
+          "abstract_and_keywords_cs_en",
+          "table_of_contents",
+          "introduction_and_goal",
+          "main_work_by_type",
+          "conclusion",
+          "references"
+        ]
+      }
+    },
+    {
+      "rule_id": "structure.additional_parts",
+      "definition": "structure.optional_sections",
+      "severity": "recommendation",
+      "parameters": {
+        "options": [
+          "acknowledgements",
+          "lists_of_figures_tables_formulas_appendices",
+          "terminology_glossary",
+          "abbreviations_and_symbols",
+          "list_of_appendices"
+        ]
+      }
+    },
+    {
+      "rule_id": "length.bp",
+      "definition": "length.main_text",
+      "severity": "recommendation",
+      "parameters": {
+        "work_type": "bachelor_thesis",
+        "min_norm_pages": 30,
+        "excluding_appendices": true,
+        "characters_per_norm_page": 1800
+      }
+    },
+    {
+      "rule_id": "length.dp",
+      "definition": "length.main_text",
+      "severity": "recommendation",
+      "parameters": {
+        "work_type": "master_thesis",
+        "min_norm_pages": 40,
+        "excluding_appendices": true,
+        "characters_per_norm_page": 1800
+      }
+    },
+    {
+      "rule_id": "length.maximum",
+      "definition": "length.main_text",
+      "severity": "recommendation",
+      "parameters": {
+        "max_norm_pages": null,
+        "note": "maximum not specified; supervisor recommends according to topic"
+      }
+    },
+    {
+      "rule_id": "format.margins",
+      "definition": "format.margins",
+      "severity": "recommendation",
+      "parameters": {
+        "top_cm": {
+          "min": 2.5,
+          "max": 3
+        },
+        "bottom_cm": {
+          "min": 2.5,
+          "max": 3
+        },
+        "outer_cm": {
+          "min": 2.5,
+          "max": 3
+        },
+        "inner_cm": {
+          "min": 3.5,
+          "max": 4
+        }
+      }
+    },
+    {
+      "rule_id": "format.page_numbers",
+      "definition": "format.page_numbering",
+      "severity": "recommendation",
+      "parameters": {
+        "position": "footer",
+        "avoid": [
+          "left",
+          "center"
+        ],
+        "display_from": "introduction",
+        "counting_from": "first_page"
+      }
+    },
+    {
+      "rule_id": "format.font",
+      "definition": "format.font",
+      "severity": "recommendation",
+      "parameters": {
+        "preferred": [
+          "Arial",
+          "Times New Roman"
+        ],
+        "single_font_throughout": true
+      }
+    },
+    {
+      "rule_id": "format.font_size",
+      "definition": "format.font_size",
+      "severity": "recommendation",
+      "parameters": {
+        "body": {
+          "Arial": 11,
+          "Times_New_Roman": 12
+        },
+        "figures_tables_graphs": {
+          "min": 9,
+          "max": 11
+        },
+        "headings": 14
+      }
+    },
+    {
+      "rule_id": "format.line_spacing",
+      "definition": "format.line_spacing",
+      "severity": "recommendation",
+      "parameters": {
+        "value": 1.5,
+        "paragraph_spacing_pt": 6,
+        "paragraph_style_must_be_consistent": true
+      }
+    },
+    {
+      "rule_id": "format.chapter_numbering",
+      "definition": "structure.heading_numbering",
+      "severity": "recommendation",
+      "parameters": {
+        "style": "arabic",
+        "start": 1
+      }
+    },
+    {
+      "rule_id": "frontmatter.title_page",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "required": [
+          "university",
+          "faculty",
+          "department",
+          "thesis_title",
+          "work_type",
+          "author",
+          "supervisor",
+          "year_of_publication"
+        ]
+      }
+    },
+    {
+      "rule_id": "frontmatter.assignment",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "printed_from": "UIS",
+        "requires_electronic_signatures": [
+          "department_head",
+          "dean"
+        ]
+      }
+    },
+    {
+      "rule_id": "frontmatter.declaration",
+      "definition": "declaration.required_content",
+      "severity": "error",
+      "parameters": {
+        "requires": [
+          "independent_authorship",
+          "all_information_sources_cited_and_listed",
+          "publication_consent",
+          "electronic_database_public_access",
+          "GDPR_compliance",
+          "copyright_awareness",
+          "date",
+          "place",
+          "signature"
+        ]
+      }
+    },
+    {
+      "rule_id": "frontmatter.acknowledgements",
+      "definition": "structure.optional_sections",
+      "severity": "recommendation",
+      "parameters": {
+        "optional": true,
+        "funding_or_practice_collaboration_must_be_stated_if_applicable": true
+      }
+    },
+    {
+      "rule_id": "abstract.languages",
+      "definition": "section.abstract.languages",
+      "severity": "error",
+      "parameters": {
+        "languages": [
+          "cs",
+          "en"
+        ]
+      }
+    },
+    {
+      "rule_id": "abstract.length",
+      "definition": "section.abstract.length",
+      "severity": "recommendation",
+      "parameters": {
+        "min_words": 200,
+        "max_words": 300,
+        "approx_pages": {
+          "min": 0.5,
+          "max": 1
+        }
+      }
+    },
+    {
+      "rule_id": "abstract.content",
+      "definition": "section.abstract.required_content",
+      "severity": "error",
+      "parameters": {
+        "requires": [
+          "main_goal_and_how_achieved",
+          "main_methods",
+          "main_results",
+          "author_contribution"
+        ]
+      }
+    },
+    {
+      "rule_id": "keywords.count",
+      "definition": "keywords.count",
+      "severity": "error",
+      "parameters": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "rule_id": "keywords.title_overlap",
+      "definition": "keywords.title_overlap",
+      "severity": "recommendation",
+      "parameters": {
+        "avoid_terms_already_in_title": true
+      }
+    },
+    {
+      "rule_id": "keywords.assignment_match",
+      "definition": "keywords.consistency",
+      "severity": "error",
+      "parameters": {
+        "must_match_assignment_keywords": true
+      }
+    },
+    {
+      "rule_id": "content.introduction_goal",
+      "definition": "content.section_requirements",
+      "severity": "warning",
+      "parameters": {
+        "requires": [
+          "context",
+          "importance",
+          "problem",
+          "goal_or_goals"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.results",
+      "definition": "content.section_requirements",
+      "severity": "warning",
+      "parameters": {
+        "must_present_results_clearly": true
+      }
+    },
+    {
+      "rule_id": "content.discussion",
+      "definition": "content.discussion_requirements",
+      "severity": "warning",
+      "parameters": {
+        "requires": [
+          "interpretation",
+          "comparison_with_relevant_literature",
+          "evaluation_of_results"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.conclusion",
+      "definition": "content.conclusion_requirements",
+      "severity": "error",
+      "parameters": {
+        "requires": [
+          "evaluation_of_results",
+          "clearly_marked_author_contribution",
+          "goal_completion",
+          "future_development",
+          "links_to_related_projects_when_relevant"
+        ]
+      }
+    },
+    {
+      "rule_id": "references.style",
+      "definition": "citations.style",
+      "severity": "error",
+      "parameters": {
+        "style": "APA_7"
+      }
+    },
+    {
+      "rule_id": "references.consistency",
+      "definition": "citations.consistency",
+      "severity": "error",
+      "parameters": {
+        "single_style_throughout": true
+      }
+    },
+    {
+      "rule_id": "references.in_text_linking",
+      "definition": "citations.reference_linking",
+      "severity": "error",
+      "parameters": {
+        "in_text_citations_must_match_reference_list": true
+      }
+    },
+    {
+      "rule_id": "references.paraphrase_preference",
+      "definition": "citations.direct_quote",
+      "severity": "recommendation",
+      "parameters": {
+        "paraphrase_preferred": true
+      }
+    },
+    {
+      "rule_id": "references.direct_quote_short",
+      "definition": "citations.direct_quote",
+      "severity": "recommendation",
+      "parameters": {
+        "max_words": 40,
+        "type": "short_quotation"
+      }
+    },
+    {
+      "rule_id": "references.direct_quote_block",
+      "definition": "citations.direct_quote",
+      "severity": "recommendation",
+      "parameters": {
+        "min_words": 41,
+        "type": "block_quotation"
+      }
+    },
+    {
+      "rule_id": "citation_managers.verification",
+      "definition": "citations.quality_control",
+      "severity": "warning",
+      "parameters": {
+        "generated_citations_must_be_checked": true
+      }
+    },
+    {
+      "rule_id": "ai.research_use",
+      "definition": "ai.usage_policy",
+      "severity": "error",
+      "parameters": {
+        "allowed_uses": [
+          "grammar_checking",
+          "stylistic_checking",
+          "text_structure_suggestions",
+          "stylistic_reformulation",
+          "source_search"
+        ],
+        "scope": "literature_review"
+      }
+    },
+    {
+      "rule_id": "ai.prohibited_use",
+      "definition": "ai.usage_policy",
+      "severity": "error",
+      "parameters": {
+        "prohibited_for": [
+          "formulating_own_results",
+          "discussion",
+          "summarizing_conclusions"
+        ]
+      }
+    },
+    {
+      "rule_id": "ai.disclosure",
+      "definition": "ai.disclosure",
+      "severity": "error",
+      "parameters": {
+        "if_content_generated_or_modified": true,
+        "cite_ai_source": true,
+        "recommended_location": "footnote",
+        "describe": [
+          "AI_use",
+          "how_used",
+          "prompt_when_possible"
+        ]
+      }
+    },
+    {
+      "rule_id": "ai.declaration",
+      "definition": "declaration.required_content",
+      "severity": "error",
+      "parameters": {
+        "additional_statement_required": true
+      }
+    },
+    {
+      "rule_id": "appendices.numbering",
+      "definition": "appendices.numbering",
+      "severity": "error",
+      "parameters": {
+        "separate_numbering": true,
+        "style": "roman"
+      }
+    },
+    {
+      "rule_id": "appendices.list",
+      "definition": "structure.optional_sections",
+      "severity": "warning",
+      "parameters": {
+        "list_of_appendices": true
+      }
+    },
+    {
+      "rule_id": "type.original_scientific",
+      "definition": "structure.type_specific",
+      "severity": "warning",
+      "parameters": {
+        "required_sections": [
+          "literature_review",
+          "methodology",
+          "study_area",
+          "results",
+          "discussion",
+          "conclusion_and_contribution"
+        ]
+      }
+    },
+    {
+      "rule_id": "type.software",
+      "definition": "structure.type_specific",
+      "severity": "warning",
+      "parameters": {
+        "required_sections": [
+          "literature_review",
+          "input_analysis",
+          "methodology",
+          "study_area_if_relevant",
+          "results",
+          "discussion",
+          "conclusion_and_contribution"
+        ]
+      }
+    },
+    {
+      "rule_id": "type.inventory",
+      "definition": "structure.type_specific",
+      "severity": "warning",
+      "parameters": {
+        "required_sections": [
+          "literature_review",
+          "study_area",
+          "methodology",
+          "results_and_management_proposal",
+          "discussion",
+          "conclusion"
+        ]
+      }
+    },
+    {
+      "rule_id": "type.project_documentation",
+      "definition": "structure.type_specific",
+      "severity": "warning",
+      "parameters": {
+        "required_sections": [
+          "literature_review",
+          "technical_report",
+          "implementation_documentation",
+          "conclusion"
+        ]
+      }
+    },
+    {
+      "rule_id": "management.results",
+      "definition": "content.type_specific",
+      "severity": "warning",
+      "parameters": {
+        "type": "management_proposal",
+        "requirements": [
+          "possible_solution_variants",
+          "evaluation_of_proposed_solution"
+        ]
+      }
+    },
+    {
+      "rule_id": "project_documentation.deliverables",
+      "definition": "content.type_specific",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "production_procedure",
+          "production_drawings",
+          "3d_visualization",
+          "cost_calculation",
+          "scaled_model_or_prototype"
+        ]
+      }
+    },
+    {
+      "rule_id": "lists.auto_generated",
+      "definition": "structure.optional_sections",
+      "severity": "recommendation",
+      "parameters": {
+        "lists": [
+          "figures",
+          "tables",
+          "formulas",
+          "appendices"
+        ],
+        "must_be_automatically_generated": true
+      }
+    }
+  ]
+}

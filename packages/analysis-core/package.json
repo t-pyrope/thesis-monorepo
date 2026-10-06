@@ -1,0 +1,52 @@
+{
+  "name": "@academic-analyzer/analysis-core",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./ai": {
+      "types": "./dist/ai.d.ts",
+      "default": "./dist/ai.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "default": "./dist/types.js"
+    },
+    "./constants": {
+      "types": "./dist/constants.d.ts",
+      "default": "./dist/constants.js"
+    },
+    "./validation": {
+      "types": "./dist/validation.d.ts",
+      "default": "./dist/validation.js"
+    },
+    "./instrumentation/analysis": {
+      "types": "./dist/instrumentation/analysis.d.ts",
+      "default": "./dist/instrumentation/analysis.js"
+    },
+    "./pdf/*": {
+      "types": "./dist/pdf/*.d.ts",
+      "default": "./dist/pdf/*.js"
+    },
+    "./docs/*": "./dist/docs/*"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/copy-assets.mjs",
+    "dev": "tsc --watch",
+    "test": "node --import tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "openai": "^7.23.0",
+    "pdfexcavator": "^0.1.2",
+    "pdfjs-dist": "^6.3.289",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "typescript": "^5.9.3",
+    "tsx": "^4.23.15"
+  }
+}

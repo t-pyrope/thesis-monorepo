@@ -1,0 +1,509 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "czu.ivp.kvalifikacni_prace",
+  "institution": {
+    "university": "Česká zemědělská univerzita v Praze",
+    "faculty": "Institut vzdělávání a poradenství",
+    "faculty_code": "IVP",
+    "work_type": "závěrečná práce"
+  },
+  "year": 2024,
+  "source_document": {
+    "filename": "czu-ivp-kp-2024.pdf"
+  },
+  "rules": [
+    {
+      "rule_id": "assignment.profile_alignment",
+      "definition": "assignment.alignment",
+      "severity": "error",
+      "parameters": {
+        "topic_must_align_with_graduate_profile": true
+      }
+    },
+    {
+      "rule_id": "assignment.required_fields",
+      "definition": "assignment.fields",
+      "severity": "error",
+      "parameters": {
+        "required": [
+          "title_cs",
+          "title_en",
+          "goals",
+          "methodology",
+          "keywords_min_3",
+          "recommended_sources_min_5"
+        ]
+      }
+    },
+    {
+      "rule_id": "assignment.approval_chain",
+      "definition": "assignment.approval",
+      "severity": "error",
+      "parameters": {
+        "steps": [
+          "supervisor",
+          "workplace_head",
+          "study_program_guarantor",
+          "IVP_director"
+        ]
+      }
+    },
+    {
+      "rule_id": "structure.required_order",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "order": [
+          "covers",
+          "title_page",
+          "assignment",
+          "declaration",
+          "acknowledgements",
+          "abstract_keywords_cs_en",
+          "table_of_contents",
+          "introduction",
+          "goal_and_methodology",
+          "chapters_and_subchapters",
+          "conclusion",
+          "sources",
+          "lists_if_relevant",
+          "appendices_if_relevant"
+        ]
+      }
+    },
+    {
+      "rule_id": "covers.content",
+      "definition": "structure.required_content",
+      "severity": "error",
+      "parameters": {
+        "requires": [
+          "university_name_and_location",
+          "work_type",
+          "submission_year",
+          "student_name"
+        ],
+        "bachelor_binding": "hard_book",
+        "final_thesis_binding": "soft_A4_ring_or_similar",
+        "color": "not_specified"
+      }
+    },
+    {
+      "rule_id": "title_page.content",
+      "definition": "structure.required_content",
+      "severity": "error",
+      "parameters": {
+        "requires": [
+          "university_name_and_location",
+          "full_IVP_name",
+          "department",
+          "ČZU_logo",
+          "thesis_title",
+          "work_type",
+          "student_name",
+          "supervisor_name_and_titles",
+          "submission_year"
+        ],
+        "page_numbered": false
+      }
+    },
+    {
+      "rule_id": "assignment.insertion",
+      "definition": "structure.assignment_placement",
+      "severity": "error",
+      "parameters": {
+        "after_title_page": true,
+        "bound_into_work": true,
+        "electronic_version_after_title_page": true
+      }
+    },
+    {
+      "rule_id": "declaration.content",
+      "definition": "declaration.required_content",
+      "severity": "error",
+      "parameters": {
+        "requires": [
+          "original_authorship",
+          "sources_properly_cited",
+          "place",
+          "date",
+          "signature"
+        ]
+      }
+    },
+    {
+      "rule_id": "abstract.languages",
+      "definition": "abstract.languages",
+      "severity": "error",
+      "parameters": {
+        "languages": [
+          "cs",
+          "en"
+        ]
+      }
+    },
+    {
+      "rule_id": "abstract.content",
+      "definition": "abstract.content",
+      "severity": "error",
+      "parameters": {
+        "requires": [
+          "topic",
+          "goal",
+          "methodology",
+          "main_results",
+          "conclusion",
+          "author_contribution"
+        ]
+      }
+    },
+    {
+      "rule_id": "abstract.length",
+      "definition": "abstract.length",
+      "severity": "recommendation",
+      "parameters": {
+        "min_words": 200,
+        "max_words": 300
+      }
+    },
+    {
+      "rule_id": "keywords.count",
+      "definition": "keywords.count",
+      "severity": "error",
+      "parameters": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "rule_id": "format.norm_page",
+      "definition": "length.norm_page_definition",
+      "severity": "error",
+      "parameters": {
+        "characters": 1800,
+        "includes_spaces": true,
+        "lines": 30,
+        "characters_per_line": 60
+      }
+    },
+    {
+      "rule_id": "length.scope",
+      "definition": "length.main_text",
+      "severity": "error",
+      "parameters": {
+        "count_from": "Úvod",
+        "count_to": "Závěr",
+        "use_total_characters_and_norm_pages": true
+      }
+    },
+    {
+      "rule_id": "format.margins.bp",
+      "definition": "format.margins",
+      "severity": "recommendation",
+      "parameters": {
+        "work_type": "bachelor_thesis",
+        "top_mm": 30,
+        "bottom_mm": 30,
+        "left_mm": 35,
+        "right_mm": 30
+      }
+    },
+    {
+      "rule_id": "format.margins.final",
+      "definition": "format.margins",
+      "severity": "recommendation",
+      "parameters": {
+        "work_type": "final_thesis",
+        "top_mm": 30,
+        "bottom_mm": 30,
+        "left_mm": 35,
+        "right_mm": 30
+      }
+    },
+    {
+      "rule_id": "format.typography",
+      "definition": "format.font",
+      "severity": "recommendation",
+      "parameters": {
+        "fonts": {
+          "serif": [
+            "Times New Roman",
+            "Courier"
+          ],
+          "sans_serif": [
+            "Arial",
+            "Calibri"
+          ]
+        },
+        "body_size_pt": 12,
+        "line_spacing": 1.5
+      }
+    },
+    {
+      "rule_id": "format.justification",
+      "definition": "format.alignment",
+      "severity": "recommendation",
+      "parameters": {
+        "body": "justified"
+      }
+    },
+    {
+      "rule_id": "format.paragraph_spacing",
+      "definition": "format.paragraph_spacing",
+      "severity": "recommendation",
+      "parameters": {
+        "before_after_pt": 6
+      }
+    },
+    {
+      "rule_id": "format.footnotes",
+      "definition": "format.footnote",
+      "severity": "recommendation",
+      "parameters": {
+        "font_size_pt": 10
+      }
+    },
+    {
+      "rule_id": "format.page_number_position",
+      "definition": "format.page_numbering",
+      "severity": "recommendation",
+      "parameters": {
+        "position": "bottom_right"
+      }
+    },
+    {
+      "rule_id": "format.chapter_breaks",
+      "definition": "format.chapter_page_break",
+      "severity": "recommendation",
+      "parameters": {
+        "main_chapters_start_new_page": true
+      }
+    },
+    {
+      "rule_id": "format.heading_punctuation",
+      "definition": "format.heading",
+      "severity": "recommendation",
+      "parameters": {
+        "no_period_after_heading": true
+      }
+    },
+    {
+      "rule_id": "format.heading_sizes",
+      "definition": "format.heading",
+      "severity": "recommendation",
+      "parameters": {
+        "main_chapter_pt": 14,
+        "subchapter_pt": 12
+      }
+    },
+    {
+      "rule_id": "length.bachelor",
+      "definition": "length.main_text",
+      "severity": "error",
+      "parameters": {
+        "work_type": "bachelor_thesis",
+        "min_norm_pages": 35,
+        "max_norm_pages": 45,
+        "min_characters": 63000,
+        "max_characters": 81000
+      }
+    },
+    {
+      "rule_id": "length.final",
+      "definition": "length.main_text",
+      "severity": "error",
+      "parameters": {
+        "work_type": "final_thesis",
+        "min_norm_pages": 25,
+        "max_norm_pages": 40,
+        "min_characters": 45000,
+        "max_characters": 72000
+      }
+    },
+    {
+      "rule_id": "printing",
+      "definition": "format.printing",
+      "severity": "recommendation",
+      "parameters": {
+        "paper": "A4",
+        "single_or_double_sided": "both_allowed"
+      }
+    },
+    {
+      "rule_id": "content.introduction",
+      "definition": "section.introduction",
+      "severity": "warning",
+      "parameters": {
+        "requires": [
+          "topic_context",
+          "problem",
+          "relevance"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.goal_methodology",
+      "definition": "section.goal_methodology",
+      "severity": "warning",
+      "parameters": {
+        "requires": [
+          "clear_goal",
+          "methodology_linked_to_goal"
+        ]
+      }
+    },
+    {
+      "rule_id": "sources.style",
+      "definition": "citations.style",
+      "severity": "warning",
+      "parameters": {
+        "source": "university_or_field_conventions",
+        "exact_style_must_be_consistent": true
+      }
+    },
+    {
+      "rule_id": "sources.linking",
+      "definition": "citations.reference_linking",
+      "severity": "error",
+      "parameters": {
+        "in_text_citation_matches_reference": true
+      }
+    },
+    {
+      "rule_id": "figures_tables.lists",
+      "definition": "structure.optional_sections",
+      "severity": "recommendation",
+      "parameters": {
+        "lists_generated_when_relevant": [
+          "tables",
+          "graphs",
+          "figures",
+          "schemes"
+        ]
+      }
+    },
+    {
+      "rule_id": "appendices.list",
+      "definition": "structure.optional_sections",
+      "severity": "recommendation",
+      "parameters": {
+        "list_of_appendices_when_relevant": true
+      }
+    },
+    {
+      "rule_id": "submission.electronic",
+      "definition": "submission.format",
+      "severity": "error",
+      "parameters": {
+        "system": "UIS",
+        "format": "PDF",
+        "main_file_max_MiB": 50,
+        "separate_appendices_max_MiB": 200
+      }
+    },
+    {
+      "rule_id": "submission.printed",
+      "definition": "submission.format",
+      "severity": "error",
+      "parameters": {
+        "copies": 2,
+        "bachelor_binding": "hard_book",
+        "final_thesis_binding": "ring_or_similar"
+      }
+    },
+    {
+      "rule_id": "submission.metadata",
+      "definition": "submission.metadata",
+      "severity": "error",
+      "parameters": {
+        "languages": [
+          "cs",
+          "en"
+        ],
+        "required": [
+          "title",
+          "abstract",
+          "keywords"
+        ]
+      }
+    },
+    {
+      "rule_id": "submission.deadline",
+      "definition": "submission.deadline",
+      "severity": "warning",
+      "parameters": {
+        "summer_term": "usually_end_of_March",
+        "winter_deferred_term": "usually_mid_November",
+        "exact_date_source": "IVP_academic_schedule"
+      }
+    },
+    {
+      "rule_id": "submission.version_identity",
+      "definition": "submission.version_consistency",
+      "severity": "error",
+      "parameters": {
+        "printed_version_must_equal_electronic_version": true
+      }
+    },
+    {
+      "rule_id": "integrity.similarity_15",
+      "definition": "academic_integrity.similarity",
+      "severity": "error",
+      "parameters": {
+        "similarity_gte_percent": 15,
+        "uncited_condition": "plagiarism",
+        "result": "fail"
+      }
+    },
+    {
+      "rule_id": "integrity.similarity_10",
+      "definition": "academic_integrity.similarity",
+      "severity": "error",
+      "parameters": {
+        "other_author_similarity_gt_percent": 10,
+        "without_proper_citations": "plagiarism"
+      }
+    },
+    {
+      "rule_id": "integrity.compilation_20",
+      "definition": "academic_integrity.similarity",
+      "severity": "error",
+      "parameters": {
+        "other_author_similarity_gt_percent": 20,
+        "even_with_citations": "plagiarism_compilation"
+      }
+    },
+    {
+      "rule_id": "integrity.uncited_sources",
+      "definition": "academic_integrity.uncited_sources",
+      "severity": "error",
+      "parameters": {
+        "uncited_bibliographic_sources_gt_percent": 10,
+        "result": "unsatisfactory"
+      }
+    },
+    {
+      "rule_id": "integrity.self_similarity",
+      "definition": "academic_integrity.self_similarity",
+      "severity": "warning",
+      "parameters": {
+        "note": "not specified in this document"
+      }
+    },
+    {
+      "rule_id": "concealment",
+      "definition": "submission.restricted_access",
+      "severity": "warning",
+      "parameters": {
+        "must_follow": "Rector Directive No. 5/2019"
+      }
+    },
+    {
+      "rule_id": "ai.use",
+      "definition": "ai.usage_policy",
+      "severity": "warning",
+      "parameters": {
+        "note": "This document does not establish a detailed AI-use policy in the extracted sections; do not infer one."
+      }
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "czu.fappz.bakalarka",
+  "institution": {
+    "university": "Česká zemědělská univerzita v Praze",
+    "faculty": "Fakulta agrobiologie, potravinových a přírodních zdrojů",
+    "faculty_code": "FAPPZ",
+    "work_type": "bakalářská práce"
+  },
+  "year": 2021,
+  "source_document": {
+    "filename": "czu-fappz-bakalarka(1).pdf"
+  },
+  "rules": [
+    {
+      "id": "assignment.study_program_alignment",
+      "definition": "assignment.alignment",
+      "severity": "error",
+      "parameters": {
+        "check": [
+          "study_program",
+          "field_or_specialization"
+        ]
+      }
+    },
+    {
+      "id": "frontmatter.title_page",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "required_elements": [
+          "author_name",
+          "supervisor_name_and_titles",
+          "optional_consultant",
+          "work_title",
+          "submission_year",
+          "university",
+          "faculty"
+        ]
+      }
+    },
+    {
+      "id": "frontmatter.declaration",
+      "definition": "declaration.required_content",
+      "severity": "error",
+      "parameters": {
+        "required_elements": [
+          "independent_work_declaration",
+          "proper_source_citation",
+          "signature"
+        ]
+      }
+    },
+    {
+      "id": "frontmatter.acknowledgements",
+      "definition": "structure.required_sections",
+      "severity": "warning",
+      "parameters": {
+        "required": false
+      }
+    },
+    {
+      "id": "abstract.bilingual",
+      "definition": "section.abstract.languages",
+      "severity": "error",
+      "parameters": {
+        "languages": [
+          "cs",
+          "en"
+        ]
+      }
+    },
+    {
+      "id": "keywords.count",
+      "definition": "keywords.count",
+      "severity": "warning",
+      "parameters": {
+        "min": 5,
+        "max": 6
+      }
+    },
+    {
+      "id": "keywords.title_overlap",
+      "definition": "keywords.title_overlap",
+      "severity": "recommendation",
+      "parameters": {
+        "allowed_overlap": false
+      }
+    },
+    {
+      "id": "structure.compilation",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "sections": [
+          "introduction",
+          "goal",
+          "literature_review",
+          "conclusion",
+          "references"
+        ]
+      }
+    },
+    {
+      "id": "structure.scientific",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "sections": [
+          "introduction",
+          "goal",
+          "literature_review",
+          "materials_and_methods",
+          "results",
+          "discussion",
+          "conclusion",
+          "references"
+        ]
+      }
+    },
+    {
+      "id": "structure.project",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "applies_to": {
+          "field_or_specialization": "ABAR"
+        },
+        "sections": [
+          "introduction",
+          "goal",
+          "literature_review",
+          "background_data_evaluation",
+          "own_project",
+          "discussion",
+          "conclusion",
+          "references"
+        ]
+      }
+    },
+    {
+      "id": "structure.lists_optional",
+      "definition": "structure.required_sections",
+      "severity": "warning",
+      "parameters": {
+        "optional": [
+          "list_of_tables",
+          "list_of_figures",
+          "list_of_graphs",
+          "list_of_abbreviations_and_symbols"
+        ]
+      }
+    },
+    {
+      "id": "format.font",
+      "definition": "format.font",
+      "severity": "recommendation",
+      "parameters": {
+        "allowed_fonts": [
+          "Times New Roman",
+          "Calibri"
+        ]
+      }
+    },
+    {
+      "id": "format.font_size",
+      "definition": "format.font_size",
+      "severity": "recommendation",
+      "parameters": {
+        "target_pt": 12
+      }
+    },
+    {
+      "id": "format.line_spacing",
+      "definition": "format.line_spacing",
+      "severity": "recommendation",
+      "parameters": {
+        "allowed_values": [
+          1.15
+        ]
+      }
+    },
+    {
+      "id": "format.margins",
+      "definition": "format.margins",
+      "severity": "recommendation",
+      "parameters": {
+        "top_cm": 2.5,
+        "bottom_cm": 2.5,
+        "left_cm": 3.5,
+        "right_cm": 1.5
+      }
+    },
+    {
+      "id": "format.printing",
+      "definition": "format.page_size",
+      "severity": "recommendation",
+      "parameters": {
+        "preferred": "double_sided",
+        "binding": [
+          "hard",
+          "thermal"
+        ]
+      }
+    },
+    {
+      "id": "content.language",
+      "definition": "language.required",
+      "severity": "warning",
+      "parameters": {
+        "document_language": "cs",
+        "note": "document describes Czech academic writing rules; English thesis requires separate guidance"
+      }
+    },
+    {
+      "id": "language.czech_conventions",
+      "definition": "language.writing_style",
+      "severity": "recommendation",
+      "parameters": {
+        "check": [
+          "quotation_marks",
+          "decimal_comma",
+          "percent_spacing",
+          "time_format"
+        ]
+      }
+    },
+    {
+      "id": "citations.style",
+      "definition": "citations.style",
+      "severity": "error",
+      "parameters": {
+        "allowed_styles": [
+          "FAPPZ_ISO_690_based",
+          "FAPPZ_Conservation_Biology_based"
+        ],
+        "selection_requires_supervisor_agreement": true
+      }
+    },
+    {
+      "id": "citations.reference_linking",
+      "definition": "citations.reference_linking",
+      "severity": "error",
+      "parameters": {
+        "every_citation_in_reference_list": true,
+        "every_reference_cited": true
+      }
+    },
+    {
+      "id": "references.minimum",
+      "definition": "references.count",
+      "severity": "error",
+      "parameters": {
+        "min": 40,
+        "relevant_only": true
+      }
+    },
+    {
+      "id": "references.foreign_ratio",
+      "definition": "references.foreign_ratio",
+      "severity": "error",
+      "parameters": {
+        "min_ratio": 0.5
+      }
+    },
+    {
+      "id": "references.source_quality",
+      "definition": "references.source_quality",
+      "severity": "warning",
+      "parameters": {
+        "prefer": [
+          "primary_sources",
+          "expert_databases",
+          "Web_of_Science",
+          "Scopus"
+        ],
+        "exclude_as_relevant": [
+          "hobby_websites",
+          "popular_books",
+          "popular_magazines_without_sources"
+        ]
+      }
+    },
+    {
+      "id": "references.recency",
+      "definition": "references.source_quality",
+      "severity": "recommendation",
+      "parameters": {
+        "prefer_recent_sources": true
+      }
+    },
+    {
+      "id": "references.alphabetical_order",
+      "definition": "references.order",
+      "severity": "error",
+      "parameters": {
+        "order": "alphabetical_by_first_author_surname"
+      }
+    },
+    {
+      "id": "assignment.required_foreign_citations",
+      "definition": "references.count",
+      "severity": "error",
+      "parameters": {
+        "scope": "assignment.literature",
+        "source_type": "scientific_foreign_literature",
+        "min": 2
+      }
+    },
+    {
+      "id": "content.goal",
+      "definition": "content.section_requirements",
+      "severity": "warning",
+      "parameters": {
+        "section": "goal",
+        "requirements": [
+          "clear",
+          "specific",
+          "achievable",
+          "connected_to_results"
+        ]
+      }
+    },
+    {
+      "id": "content.methodology",
+      "definition": "content.methodology_completeness",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "materials_or_data",
+          "methods",
+          "experimental_or_analytical_procedure",
+          "statistical_methods_when_applicable"
+        ]
+      }
+    },
+    {
+      "id": "content.discussion_separate",
+      "definition": "content.results_discussion_separation",
+      "severity": "error",
+      "parameters": {
+        "discussion_must_be_separate_from_results": true
+      }
+    },
+    {
+      "id": "content.discussion_economic_or_ecological",
+      "definition": "content.section_requirements",
+      "severity": "error",
+      "parameters": {
+        "condition": "direct_economic_significance",
+        "requirements": [
+          "economic_evaluation_of_recommendations"
+        ],
+        "alternative": "ecological_aspects_when_applicable"
+      }
+    },
+    {
+      "id": "content.conclusion",
+      "definition": "content.conclusion_requirements",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "key_findings",
+          "goal_completion",
+          "novel_contribution",
+          "recommendations_optional"
+        ],
+        "forbidden": [
+          "repetition_of_methodology",
+          "repetition_of_results"
+        ]
+      }
+    },
+    {
+      "id": "visuals.reference",
+      "definition": "visuals.text_reference",
+      "severity": "error",
+      "parameters": {
+        "required": true
+      }
+    },
+    {
+      "id": "visuals.numbering",
+      "definition": "visuals.numbering",
+      "severity": "error",
+      "parameters": {
+        "separate_sequences": [
+          "tables",
+          "figures"
+        ],
+        "order": "appearance"
+      }
+    },
+    {
+      "id": "visuals.caption",
+      "definition": "visuals.caption",
+      "severity": "error",
+      "parameters": {
+        "required": true
+      }
+    },
+    {
+      "id": "visuals.source",
+      "definition": "visuals.source",
+      "severity": "error",
+      "parameters": {
+        "required": true,
+        "external_image_full_citation_in_references": true
+      }
+    },
+    {
+      "id": "appendices.pagination",
+      "definition": "format.page_numbering",
+      "severity": "warning",
+      "parameters": {
+        "separate_pagination": true,
+        "preferred_numerals": "roman"
+      }
+    },
+    {
+      "id": "appendices.toc",
+      "definition": "structure.section_presence",
+      "severity": "warning",
+      "parameters": {
+        "appendices_heading_in_toc": false
+      }
+    },
+    {
+      "id": "integrity.declaration",
+      "definition": "declaration.required_content",
+      "severity": "error",
+      "parameters": {
+        "student_declares_original_work": true,
+        "student_declares_sources_cited": true
+      }
+    }
+  ]
+}

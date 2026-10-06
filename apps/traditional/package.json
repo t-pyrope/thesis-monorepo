@@ -1,0 +1,40 @@
+{
+  "name": "@academic-analyzer/traditional",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "prebuild": "npm run build --workspace @academic-analyzer/analysis-core && npm run build --workspace @academic-analyzer/backend-common",
+    "predev": "npm run build --workspace @academic-analyzer/analysis-core && npm run build --workspace @academic-analyzer/backend-common"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@koa/router": "^15.7.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.4",
+    "koa": "^3.2.1",
+    "koa-bodyparser": "^4.4.1",
+    "openai": "^7.23.0",
+    "@academic-analyzer/analysis-core": "1.0.0",
+    "@academic-analyzer/backend-common": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^3.0.3",
+    "@types/koa__router": "^12.0.5",
+    "@types/koa-bodyparser": "^4.3.13",
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.14.0"
+  }
+}

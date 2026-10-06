@@ -1,0 +1,488 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "czu.fappz.diplomka",
+  "institution": {
+    "university": "Česká zemědělská univerzita v Praze",
+    "faculty": "Fakulta agrobiologie, potravinových a přírodních zdrojů",
+    "faculty_code": "FAPPZ",
+    "work_type": "diplomová práce"
+  },
+  "year": 2021,
+  "source_document": {
+    "filename": "czu-fappz-diplomka-2021(1).pdf"
+  },
+  "rules": [
+    {
+      "rule_id": "assignment.study_program_alignment",
+      "definition": "assignment.alignment",
+      "severity": "error",
+      "parameters": {
+        "check": [
+          "study_program",
+          "field_or_specialization"
+        ]
+      }
+    },
+    {
+      "rule_id": "assignment.scientific_hypotheses_or_goals",
+      "definition": "content.goal_quality",
+      "severity": "error",
+      "parameters": {
+        "requires": [
+          "hypothesis_or_adequately_defined_scientific_goals"
+        ]
+      }
+    },
+    {
+      "rule_id": "assignment.foreign_scientific_sources",
+      "definition": "references.count",
+      "severity": "error",
+      "parameters": {
+        "scope": "assignment.literature",
+        "source_type": "scientific_foreign_literature",
+        "min": 3
+      }
+    },
+    {
+      "rule_id": "frontmatter.title_page",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "required_elements": [
+          "author_name",
+          "supervisor_name_and_titles",
+          "optional_consultant",
+          "work_title",
+          "submission_year",
+          "university",
+          "faculty"
+        ]
+      }
+    },
+    {
+      "rule_id": "frontmatter.declaration",
+      "definition": "declaration.required_content",
+      "severity": "error",
+      "parameters": {
+        "required_elements": [
+          "independent_work_declaration",
+          "proper_source_citation",
+          "signature"
+        ]
+      }
+    },
+    {
+      "rule_id": "frontmatter.acknowledgements",
+      "definition": "structure.required_sections",
+      "severity": "warning",
+      "parameters": {
+        "required": false,
+        "recommended_max_lines": 10
+      }
+    },
+    {
+      "rule_id": "abstract.bilingual",
+      "definition": "section.abstract.languages",
+      "severity": "error",
+      "parameters": {
+        "languages": [
+          "cs",
+          "en"
+        ],
+        "content_identical": true
+      }
+    },
+    {
+      "rule_id": "abstract.content",
+      "definition": "section.abstract.required_content",
+      "severity": "error",
+      "parameters": {
+        "required_elements": [
+          "goals",
+          "methodology",
+          "key_results",
+          "conclusions",
+          "scientific_contribution"
+        ]
+      }
+    },
+    {
+      "rule_id": "abstract.length",
+      "definition": "section.abstract.length",
+      "severity": "warning",
+      "parameters": {
+        "metric": "words",
+        "min": 200,
+        "max": 350,
+        "max_pages": 1
+      }
+    },
+    {
+      "rule_id": "abstract.tense",
+      "definition": "language.writing_style",
+      "severity": "warning",
+      "parameters": {
+        "section": "abstract",
+        "allowed_tenses": [
+          "past"
+        ]
+      }
+    },
+    {
+      "rule_id": "keywords.count",
+      "definition": "keywords.count",
+      "severity": "warning",
+      "parameters": {
+        "min": 5,
+        "max": 6
+      }
+    },
+    {
+      "rule_id": "keywords.title_overlap",
+      "definition": "keywords.title_overlap",
+      "severity": "recommendation",
+      "parameters": {
+        "allowed_overlap": false
+      }
+    },
+    {
+      "rule_id": "structure.experimental",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "sections": [
+          "introduction",
+          "scientific_hypothesis_and_goals",
+          "literature_review",
+          "materials_and_methods",
+          "results",
+          "discussion",
+          "conclusion",
+          "references"
+        ]
+      }
+    },
+    {
+      "rule_id": "structure.project",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "applies_to": {
+          "field_or_program": "AMAR"
+        },
+        "sections": [
+          "introduction",
+          "goal",
+          "literature_review",
+          "background_data_evaluation",
+          "own_project",
+          "discussion",
+          "conclusion",
+          "references"
+        ]
+      }
+    },
+    {
+      "rule_id": "structure.lists_optional",
+      "definition": "structure.required_sections",
+      "severity": "warning",
+      "parameters": {
+        "optional": [
+          "list_of_tables",
+          "list_of_figures",
+          "list_of_graphs",
+          "list_of_abbreviations_and_symbols"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.goal",
+      "definition": "content.goal_quality",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "clear",
+          "scientific",
+          "verifiable",
+          "aligned_with_work"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.methodology",
+      "definition": "content.methodology_completeness",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "sample_count",
+          "experiment_description",
+          "data_type",
+          "collection_period",
+          "location",
+          "special_equipment",
+          "statistical_methods_when_applicable"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.discussion_separate",
+      "definition": "content.results_discussion_separation",
+      "severity": "error",
+      "parameters": {
+        "discussion_must_be_separate_from_results": true
+      }
+    },
+    {
+      "rule_id": "content.discussion_economic_or_ecological",
+      "definition": "content.section_requirements",
+      "severity": "error",
+      "parameters": {
+        "condition": "direct_economic_significance",
+        "requirements": [
+          "economic_evaluation_of_recommendations"
+        ],
+        "alternative": "ecological_aspects_when_applicable"
+      }
+    },
+    {
+      "rule_id": "content.conclusion",
+      "definition": "content.conclusion_requirements",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "key_findings",
+          "hypotheses_or_goals_status",
+          "novel_contribution",
+          "recommendations_optional"
+        ],
+        "forbidden": [
+          "repetition_of_methodology",
+          "repetition_of_results"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.conclusion_tense",
+      "definition": "language.writing_style",
+      "severity": "warning",
+      "parameters": {
+        "section": "conclusion",
+        "allowed_tenses": [
+          "past"
+        ]
+      }
+    },
+    {
+      "rule_id": "format.font",
+      "definition": "format.font",
+      "severity": "recommendation",
+      "parameters": {
+        "allowed_fonts": [
+          "Times New Roman",
+          "Calibri"
+        ]
+      }
+    },
+    {
+      "rule_id": "format.font_size",
+      "definition": "format.font_size",
+      "severity": "recommendation",
+      "parameters": {
+        "target_pt": 12
+      }
+    },
+    {
+      "rule_id": "format.line_spacing",
+      "definition": "format.line_spacing",
+      "severity": "recommendation",
+      "parameters": {
+        "allowed_values": [
+          1.15
+        ]
+      }
+    },
+    {
+      "rule_id": "format.margins",
+      "definition": "format.margins",
+      "severity": "recommendation",
+      "parameters": {
+        "top_cm": 2.5,
+        "bottom_cm": 2.5,
+        "left_cm": 3.5,
+        "right_cm": 1.5
+      }
+    },
+    {
+      "rule_id": "format.printing",
+      "definition": "format.page_size",
+      "severity": "recommendation",
+      "parameters": {
+        "preferred": "double_sided",
+        "binding": [
+          "hard",
+          "thermal"
+        ]
+      }
+    },
+    {
+      "rule_id": "citations.style",
+      "definition": "citations.style",
+      "severity": "error",
+      "parameters": {
+        "allowed_styles": [
+          "FAPPZ_ISO_690_based",
+          "FAPPZ_Conservation_Biology_based"
+        ],
+        "selection_requires_supervisor_agreement": true
+      }
+    },
+    {
+      "rule_id": "citations.reference_linking",
+      "definition": "citations.reference_linking",
+      "severity": "error",
+      "parameters": {
+        "every_citation_in_reference_list": true,
+        "every_reference_cited": true
+      }
+    },
+    {
+      "rule_id": "references.minimum",
+      "definition": "references.count",
+      "severity": "error",
+      "parameters": {
+        "min": 50,
+        "relevant_only": true
+      }
+    },
+    {
+      "rule_id": "references.foreign_ratio",
+      "definition": "references.foreign_ratio",
+      "severity": "error",
+      "parameters": {
+        "min_ratio": 0.5
+      }
+    },
+    {
+      "rule_id": "references.source_quality",
+      "definition": "references.source_quality",
+      "severity": "warning",
+      "parameters": {
+        "prefer": [
+          "primary_sources",
+          "expert_databases",
+          "Web_of_Science",
+          "Scopus"
+        ],
+        "exclude_as_relevant": [
+          "hobby_websites",
+          "popular_books",
+          "popular_magazines_without_sources"
+        ]
+      }
+    },
+    {
+      "rule_id": "references.alphabetical_order",
+      "definition": "references.order",
+      "severity": "error",
+      "parameters": {
+        "order": "alphabetical_by_first_author_surname"
+      }
+    },
+    {
+      "rule_id": "visuals.reference",
+      "definition": "visuals.text_reference",
+      "severity": "error",
+      "parameters": {
+        "required": true
+      }
+    },
+    {
+      "rule_id": "visuals.numbering",
+      "definition": "visuals.numbering",
+      "severity": "error",
+      "parameters": {
+        "separate_sequences": [
+          "tables",
+          "figures"
+        ],
+        "order": "appearance",
+        "graphs_can_be_figures_or_separate_series": true
+      }
+    },
+    {
+      "rule_id": "visuals.caption",
+      "definition": "visuals.caption",
+      "severity": "error",
+      "parameters": {
+        "required": true,
+        "table_position": "above",
+        "figure_position": "below",
+        "naming_style_must_be_consistent": true
+      }
+    },
+    {
+      "rule_id": "visuals.source",
+      "definition": "visuals.source",
+      "severity": "error",
+      "parameters": {
+        "required_for_external_objects": true
+      }
+    },
+    {
+      "rule_id": "appendices.pagination",
+      "definition": "format.page_numbering",
+      "severity": "warning",
+      "parameters": {
+        "separate_pagination": true,
+        "preferred_numerals": "roman"
+      }
+    },
+    {
+      "rule_id": "appendices.source",
+      "definition": "visuals.source",
+      "severity": "error",
+      "parameters": {
+        "external_photos_require_source": true,
+        "full_citation_in_references": true,
+        "internet_address_under_image": true
+      }
+    },
+    {
+      "rule_id": "language.czech_conventions",
+      "definition": "language.writing_style",
+      "severity": "recommendation",
+      "parameters": {
+        "check": [
+          "quotation_marks",
+          "decimal_comma",
+          "percent_spacing",
+          "time_format"
+        ]
+      }
+    },
+    {
+      "rule_id": "submission.deadline",
+      "definition": "submission.deadline",
+      "severity": "error",
+      "parameters": {
+        "deadline_source": "FAPPZ study schedule"
+      }
+    },
+    {
+      "rule_id": "evaluation.scientific_quality",
+      "definition": "content.section_requirements",
+      "severity": "recommendation",
+      "parameters": {
+        "criteria": [
+          "scientific_methodology",
+          "hypothesis_or_goal",
+          "data_collection",
+          "statistical_testing",
+          "results_presentation",
+          "interpretation",
+          "discussion_in_current_knowledge"
+        ]
+      }
+    }
+  ]
+}

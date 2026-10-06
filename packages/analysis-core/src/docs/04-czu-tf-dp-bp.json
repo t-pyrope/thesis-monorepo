@@ -1,0 +1,585 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "czu.tf.zaverecna_prace",
+  "institution": {
+    "university": "Česká zemědělská univerzita v Praze",
+    "faculty": "Technická fakulta",
+    "faculty_code": "TF",
+    "work_type": "závěrečná práce"
+  },
+  "year": 2025,
+  "source_document": {
+    "filename": "czu-tf-dp-bp-2025(1).pdf"
+  },
+  "rules": [
+    {
+      "rule_id": "assignment.profile_alignment",
+      "definition": "assignment.alignment",
+      "severity": "error",
+      "parameters": {
+        "check": [
+          "topic",
+          "graduate_profile",
+          "study_field"
+        ]
+      }
+    },
+    {
+      "rule_id": "structure.front_matter",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "sections": [
+          "covers",
+          "title_page",
+          "assignment_sheet",
+          "author_declaration",
+          "acknowledgements_optional",
+          "abstract_and_keywords",
+          "table_of_contents",
+          "optional_lists"
+        ]
+      }
+    },
+    {
+      "rule_id": "structure.main_text",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "sections": [
+          "introduction",
+          "goal",
+          "methodology",
+          "theoretical_background",
+          "solution_or_practical_part",
+          "results_and_discussion",
+          "conclusion",
+          "sources"
+        ]
+      }
+    },
+    {
+      "rule_id": "structure.appendices",
+      "definition": "structure.required_sections",
+      "severity": "warning",
+      "parameters": {
+        "required_when_used": true,
+        "section_name": "appendices"
+      }
+    },
+    {
+      "rule_id": "structure.chapter_names",
+      "definition": "structure.section_naming",
+      "severity": "warning",
+      "parameters": {
+        "allowed_variants": {
+          "4": [
+            "Teoretická východiska",
+            "Přehled řešené problematiky",
+            "Současný stav sledované problematiky"
+          ],
+          "5": [
+            "Postup řešení",
+            "Vlastní zpracování",
+            "Vlastní řešení",
+            "Praktická část práce"
+          ],
+          "6": [
+            "Výsledky a diskuse",
+            "Zhodnocení výsledků",
+            "Výsledky a jejich hodnocení"
+          ],
+          "7": [
+            "Závěr",
+            "Závěr a doporučení"
+          ]
+        },
+        "one_variant_per_position": true
+      }
+    },
+    {
+      "rule_id": "length.main_text.bp",
+      "definition": "length.main_text",
+      "severity": "error",
+      "parameters": {
+        "work_type": "bachelor_thesis",
+        "metric": "norm_pages",
+        "min": 30
+      }
+    },
+    {
+      "rule_id": "length.main_text.dp",
+      "definition": "length.main_text",
+      "severity": "error",
+      "parameters": {
+        "work_type": "master_thesis",
+        "metric": "norm_pages",
+        "min": 40
+      }
+    },
+    {
+      "rule_id": "length.main_text.maximum",
+      "definition": "length.main_text",
+      "severity": "recommendation",
+      "parameters": {
+        "metric": "norm_pages",
+        "max": 50
+      }
+    },
+    {
+      "rule_id": "length.norm_page",
+      "definition": "length.norm_page_definition",
+      "severity": "error",
+      "parameters": {
+        "characters_per_page": 1800
+      }
+    },
+    {
+      "rule_id": "format.page_size",
+      "definition": "format.page_size",
+      "severity": "error",
+      "parameters": {
+        "allowed": [
+          "A4"
+        ]
+      }
+    },
+    {
+      "rule_id": "format.printing",
+      "definition": "format.page_size",
+      "severity": "recommendation",
+      "parameters": {
+        "preferred": "double_sided",
+        "single_sided_allowed": true
+      }
+    },
+    {
+      "rule_id": "format.typography",
+      "definition": "format.font",
+      "severity": "recommendation",
+      "parameters": {
+        "font_size_pt": 12,
+        "line_spacing": {
+          "min": 1.2,
+          "max": 1.5
+        }
+      }
+    },
+    {
+      "rule_id": "format.margins",
+      "definition": "format.margins",
+      "severity": "recommendation",
+      "parameters": {
+        "left_mm": 30,
+        "right_mm": 20,
+        "top_mm": 25,
+        "bottom_mm": 25
+      }
+    },
+    {
+      "rule_id": "format.text_width",
+      "definition": "format.document_format",
+      "severity": "recommendation",
+      "parameters": {
+        "text_width_cm": {
+          "min": 15,
+          "max": 16
+        },
+        "text_height_cm": {
+          "min": 23,
+          "max": 25
+        }
+      }
+    },
+    {
+      "rule_id": "frontmatter.covers",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "required_elements": [
+          "university",
+          "work_type",
+          "defense_year",
+          "author_name"
+        ],
+        "work_type_cover_colors": {
+          "bachelor": "dark_blue",
+          "master": "black"
+        }
+      }
+    },
+    {
+      "rule_id": "frontmatter.title_page",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "required_elements": [
+          "university",
+          "faculty",
+          "department",
+          "title",
+          "work_type",
+          "author",
+          "submission_year",
+          "ČZU_v_Praze"
+        ]
+      }
+    },
+    {
+      "rule_id": "frontmatter.assignment",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "parameters": {
+        "required": true,
+        "position": "immediately_after_title_page",
+        "approval": [
+          "department_head",
+          "faculty_dean"
+        ],
+        "printed_from": "UIS"
+      }
+    },
+    {
+      "rule_id": "frontmatter.declaration",
+      "definition": "declaration.required_content",
+      "severity": "error",
+      "parameters": {
+        "required_elements": [
+          "independent_authorship",
+          "only_cited_sources_used",
+          "publication_consent",
+          "electronic_database_storage_awareness",
+          "copyright_awareness",
+          "signature"
+        ]
+      }
+    },
+    {
+      "rule_id": "frontmatter.acknowledgements",
+      "definition": "structure.required_sections",
+      "severity": "recommendation",
+      "parameters": {
+        "optional": true
+      }
+    },
+    {
+      "rule_id": "abstract.languages",
+      "definition": "section.abstract.languages",
+      "severity": "error",
+      "parameters": {
+        "languages": [
+          "cs",
+          "en"
+        ]
+      }
+    },
+    {
+      "rule_id": "abstract.length",
+      "definition": "section.abstract.length",
+      "severity": "error",
+      "parameters": {
+        "metric": "words",
+        "min": 150,
+        "max": 200
+      }
+    },
+    {
+      "rule_id": "keywords.count",
+      "definition": "keywords.count",
+      "severity": "error",
+      "parameters": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "rule_id": "keywords.format",
+      "definition": "content.section_requirements",
+      "severity": "error",
+      "parameters": {
+        "separator": "semicolon",
+        "languages": [
+          "cs",
+          "en"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.introduction",
+      "definition": "content.section_requirements",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "context",
+          "problem",
+          "importance",
+          "motivation",
+          "connection_to_goal"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.goal",
+      "definition": "content.goal_quality",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "clear",
+          "specific",
+          "verifiable",
+          "aligned_with_assignment"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.methodology",
+      "definition": "content.methodology_completeness",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "methods",
+          "data_acquisition",
+          "data_processing",
+          "statistical_methods_when_applicable",
+          "experiment_place_and_time_when_applicable",
+          "sample_characteristics_when_applicable"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.results_discussion",
+      "definition": "content.results_discussion_separation",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "tables_and_graphs_with_commentary",
+          "analysis",
+          "justification",
+          "comparison_with_hypotheses_when_applicable",
+          "comparison_with_theoretical_background_and_literature"
+        ]
+      }
+    },
+    {
+      "rule_id": "content.conclusion",
+      "definition": "content.conclusion_requirements",
+      "severity": "error",
+      "parameters": {
+        "requirements": [
+          "results_evaluation",
+          "clearly_marked_author_contribution",
+          "goal_completion",
+          "future_development",
+          "follow_up_projects_when_relevant"
+        ],
+        "economic_evaluation": {
+          "required_for": [
+            "OPT"
+          ],
+          "otherwise": "highly_desirable"
+        }
+      }
+    },
+    {
+      "rule_id": "content.author_contribution",
+      "definition": "content.section_requirements",
+      "severity": "warning",
+      "parameters": {
+        "requirements": [
+          "clearly_distinguish_author_created_content_from_literature_or_supervisor_contributions"
+        ]
+      }
+    },
+    {
+      "rule_id": "references.citation_standard",
+      "definition": "citations.style",
+      "severity": "recommendation",
+      "parameters": {
+        "standard": "ČSN ISO 690"
+      }
+    },
+    {
+      "rule_id": "references.bibliographic_completeness",
+      "definition": "citations.consistency",
+      "severity": "error",
+      "parameters": {
+        "check": "correct_source_entry_format"
+      }
+    },
+    {
+      "rule_id": "references.citation_linking",
+      "definition": "citations.reference_linking",
+      "severity": "error",
+      "parameters": {
+        "every_reference_cited": true,
+        "every_citation_in_source_list": true
+      }
+    },
+    {
+      "rule_id": "visuals.text_reference",
+      "definition": "visuals.text_reference",
+      "severity": "error",
+      "parameters": {
+        "required": true
+      }
+    },
+    {
+      "rule_id": "visuals.numbering",
+      "definition": "visuals.numbering",
+      "severity": "error",
+      "parameters": {
+        "separate_sequences": [
+          "tables",
+          "figures"
+        ],
+        "order": "appearance"
+      }
+    },
+    {
+      "rule_id": "visuals.caption",
+      "definition": "visuals.caption",
+      "severity": "warning",
+      "parameters": {
+        "preferred_position": "above",
+        "alternative_position": "below_if_consistent",
+        "must_be_consistent": true,
+        "italic": true
+      }
+    },
+    {
+      "rule_id": "visuals.source",
+      "definition": "visuals.source",
+      "severity": "error",
+      "parameters": {
+        "required_for_adapted_or_taken_material": true,
+        "italic": true
+      }
+    },
+    {
+      "rule_id": "appendices.contents",
+      "definition": "structure.required_sections",
+      "severity": "warning",
+      "parameters": {
+        "all_appendices_in_table_of_contents": true
+      }
+    },
+    {
+      "rule_id": "appendices.numbering",
+      "definition": "format.page_numbering",
+      "severity": "warning",
+      "parameters": {
+        "separate_from_main_text": true
+      }
+    },
+    {
+      "rule_id": "appendices.content",
+      "definition": "content.section_requirements",
+      "severity": "recommendation",
+      "parameters": {
+        "examples": [
+          "user_manual",
+          "questionnaire",
+          "detailed_schemes",
+          "detailed_project_descriptions",
+          "term_definitions",
+          "relevant_standards"
+        ]
+      }
+    },
+    {
+      "rule_id": "ai.disclosure",
+      "definition": "ai.usage_policy",
+      "severity": "error",
+      "parameters": {
+        "content_use_requires_citation": true,
+        "recommended_disclosure_location": "footnote",
+        "disclosure_should_describe": [
+          "AI_use",
+          "how_used",
+          "prompt_when_possible"
+        ]
+      }
+    },
+    {
+      "rule_id": "ai.declaration",
+      "definition": "declaration.required_content",
+      "severity": "error",
+      "parameters": {
+        "requires_additional_declaration": true,
+        "declaration_topic": "AI_used_in_accordance_with_university_rules_and_academic_integrity"
+      }
+    },
+    {
+      "rule_id": "integrity.uncited_similarity",
+      "definition": "academic_integrity.plagiarism_similarity",
+      "severity": "error",
+      "parameters": {
+        "threshold_percent": 10
+      }
+    },
+    {
+      "rule_id": "integrity.cited_compilation",
+      "definition": "academic_integrity.plagiarism_similarity",
+      "severity": "error",
+      "parameters": {
+        "threshold_percent": 20,
+        "condition": "similarity_with_other_authors_even_when_cited"
+      }
+    },
+    {
+      "rule_id": "integrity.self_similarity",
+      "definition": "academic_integrity.plagiarism_similarity",
+      "severity": "error",
+      "parameters": {
+        "max_percent": 40
+      }
+    },
+    {
+      "rule_id": "integrity.uncited_bibliography",
+      "definition": "academic_integrity.uncited_sources",
+      "severity": "error",
+      "parameters": {
+        "max_percent": 10
+      }
+    },
+    {
+      "rule_id": "integrity.decision_authority",
+      "definition": "academic_integrity.plagiarism_similarity",
+      "severity": "warning",
+      "parameters": {
+        "final_decision_by": "state_final_exam_commission"
+      }
+    },
+    {
+      "rule_id": "submission.electronic",
+      "definition": "submission.deadline",
+      "severity": "error",
+      "parameters": {
+        "academic_year": "2025/2026",
+        "deadline": "2026-03-31",
+        "format": "PDF",
+        "system": "UIS"
+      }
+    },
+    {
+      "rule_id": "submission.printed",
+      "definition": "submission.deadline",
+      "severity": "error",
+      "parameters": {
+        "academic_year": "2025/2026",
+        "deadline": "2026-04-03 12:00",
+        "format": "bound_book",
+        "destination": "relevant_department"
+      }
+    },
+    {
+      "rule_id": "submission.publication",
+      "definition": "declaration.required_content",
+      "severity": "warning",
+      "parameters": {
+        "work_publicly_available": true,
+        "sensitive_company_data_requires_agreed_handling": true
+      }
+    }
+  ]
+}

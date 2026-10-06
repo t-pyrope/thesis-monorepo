@@ -1,0 +1,34 @@
+{
+  "name": "thesis-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "scripts": {
+    "build:core": "npm run build --workspace @academic-analyzer/analysis-core",
+    "build:frontend": "npm run build --workspace @academic-analyzer/frontend",
+    "build:traditional": "npm run build --workspace @academic-analyzer/traditional",
+    "build:event-driven": "npm run build --workspace @academic-analyzer/event-driven",
+    "build": "npm run build:traditional && npm run build:event-driven && npm run build:frontend",
+    "dev:frontend": "npm run dev --workspace @academic-analyzer/frontend",
+    "dev:traditional": "npm run dev --workspace @academic-analyzer/traditional",
+    "dev:event-driven": "npm run dev --workspace @academic-analyzer/event-driven",
+    "dev:worker": "npm run build:shared && npm run dev:worker --workspace @academic-analyzer/event-driven",
+    "start:frontend": "npm run start --workspace @academic-analyzer/frontend",
+    "start:traditional": "npm run start --workspace @academic-analyzer/traditional",
+    "start:event-driven": "npm run start --workspace @academic-analyzer/event-driven",
+    "start:worker": "npm run start:worker --workspace @academic-analyzer/event-driven",
+    "pretest": "npm run build:shared",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run build:shared && npm run typecheck --workspace @academic-analyzer/frontend",
+    "lint": "npm run lint --workspace @academic-analyzer/frontend",
+    "verify:frontend": "node scripts/verify-frontend-trace.mjs",
+    "build:backend-common": "npm run build --workspace @academic-analyzer/backend-common",
+    "build:shared": "npm run build:core && npm run build:backend-common"
+  }
+}

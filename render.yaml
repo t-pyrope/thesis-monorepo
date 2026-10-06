@@ -1,0 +1,71 @@
+services:
+  - type: web
+    name: academic-analyzer-be-traditional
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npm run build:traditional
+    startCommand: npm run start:traditional
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY
+        value: "true"
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false
+      - key: APP_PASSWORD_HASH
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: COOKIE_SAME_SITE
+        value: none
+  - type: keyvalue
+    name: academic-analysis-queue
+    plan: 256mb
+    region: frankfurt
+    maxmemoryPolicy: noeviction
+    ipAllowList: []
+  - type: web
+    name: academic-analyzer-event-driven-api
+    runtime: node
+    plan: 0.5c-512mb
+    region: frankfurt
+    buildCommand: npm ci --include=dev && npm run build:event-driven
+    startCommand: npm run start:event-driven
+    healthCheckPath: /health
+    envVars:
+      - fromGroup: academic-analyzer-event-driven
+      - key: NODE_VERSION
+        value: 22.22.0
+      - key: TRUST_PROXY
+        value: true
+      - key: REDIS_URL
+        fromService:
+          type: keyvalue
+          name: academic-analysis-queue
+          property: connectionString
+  - type: worker
+    name: academic-analyzer-event-driven-worker
+    runtime: node
+    plan: 0.5c-512mb
+    region: frankfurt
+    numInstances: 1
+    buildCommand: npm ci --include=dev && npm run build:event-driven
+    startCommand: npm run start:worker
+    envVars:
+      - fromGroup: academic-analyzer-event-driven
+      - key: NODE_VERSION
+        value: 22.22.0
+      - key: REDIS_URL
+        fromService:
+          type: keyvalue
+          name: academic-analysis-queue
+          property: connectionString

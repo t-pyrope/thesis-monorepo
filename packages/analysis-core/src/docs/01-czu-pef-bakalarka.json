@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0",
+  "year": 2019,
+  "profile_id": "czu.pef.bakalarka",
+  "institution": {
+    "university": "Česká zemědělská univerzita v Praze",
+    "faculty": "Provozně ekonomická fakulta",
+    "work_type": "bakalářská práce",
+    "faculty_code": "PEF"
+  },
+  "documentRules": {
+    "pageSize": "A4",
+    "marginLeftMm": 35,
+    "fontFamily": "Times New Roman",
+    "fontSize": 12,
+    "lineSpacing": 1.5,
+    "maxFileSizeInMb": 50,
+    "chapterStartsNewPage": true,
+    "tableRules": {
+      "leftColumnAlignedLeft": true,
+      "captionFontSizeLessThanMain": 2
+    },
+    "tableImageGraphEquation": {
+      "centerAligned": true
+    }
+  },
+  "rules": [
+    {
+      "id": "assignment.study_program_alignment",
+      "definition": "assignment.alignment",
+      "severity": "error",
+      "description": "Téma bakalářské práce odpovídá zaměření studijního programu a profilu příslušné katedry. Katedry - 1) Katedra ekonomických teorií - ekonomická teorie, mikroekonomie, makroekonomie, 2) Katedra ekonomiky - podniková ekonomika, ekonomika zemědělství, hospodaření podniků, 3) Katedra humanitních věd - sociologie, sociální výzkum, venkov, udržitelný rozvoj, 4) Katedra informačního inženýrství - informační inženýrství, informační systémy, AI, modelování a práce s daty, 5) Katedra informačních technologií - ICT, IS, Big Data/Data Science, IoT, GIS, sítě, bezpečnost, web/mobile, UX, AI, 6) Katedra jazyků - cizí jazyky, odborný jazyk, profesní komunikace, 7) Katedra managementu a marketingu - management, marketing, strategické řízení, HR, logistika, plánování, 8) Katedra obchodu a financí - obchod, finance, účetnictví, daně, bankovnictví, 9) Katedra práva - právní základy, jednotlivá právní odvětví, české a evropské právo, 10) Katedra psychologie - psychologie člověka, psychologie v organizaci, sociální dovednosti, psychologický výzkum a poradenství, 11) Katedra statistiky - aplikovaná statistika, teorie pravděpodobnosti, finanční a pojistná matematika, 12) Katedra systémového inženýrství - systémové inženýrství, modelování, optimalizace, operační výzkum, rozhodování"
+    },
+    {
+      "id": "structure.required_sections",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "description": "Bakalářská práce obsahuje požadované části: titulní list, zadání bakalářské práce, prohlášení, český název práce s abstraktem a klíčovými slovy, anglický název práce s abstraktem a klíčovými slovy, obsah, Úvod, Cíl práce a metodika, teoretickou část, praktickou část, zhodnocení výsledků, Závěr a Seznam použitých zdrojů. V rámci hlavní struktury práce je dále uvedena kapitola 8 obsahující seznam obrázků, seznam tabulek, seznam grafů a seznam použitých zkratek. Přílohy nejsou povinnou součástí práce."
+    },
+    {
+      "id": "structure.section_order",
+      "definition": "structure.section_order",
+      "severity": "error",
+      "description": "Části bakalářské práce jsou uspořádány v požadovaném pořadí: titulní list, zadání bakalářské práce, prohlášení, případné poděkování, český název práce s abstraktem a klíčovými slovy, anglický název práce s abstraktem a klíčovými slovy, obsah, 1 Úvod, 2 Cíl práce a metodika, 3 teoretická část, 4 praktická část, 5 zhodnocení výsledků, 6 Závěr, 7 Seznam použitých zdrojů, 8 seznam obrázků, seznam tabulek, seznam grafů a seznam použitých zkratek a případné přílohy."
+    },
+    {
+      "id": "structure.allowed_chapter_variants",
+      "definition": "structure.section_naming",
+      "severity": "error",
+      "description": "Kapitoly 3–5 bakalářské práce používají jednu z oficiálně stanovených variant názvu: kapitola 3 – „Teoretická část práce“, „Teoretická východiska“ nebo „Současný stav poznání řešené problematiky“; kapitola 4 – „Praktická část práce“, „Vlastní práce“ nebo „Analytická část práce“; kapitola 5 – „Zhodnocení výsledků“, „Zhodnocení a doporučení“ nebo „Výsledky a diskuse“"
+    },
+    {
+      "id": "pagination.numbering_start",
+      "definition": "format.page_numbering",
+      "severity": "error",
+      "description": "Číslování stran začíná na první číslované straně textové části a tato strana je označena číslem 3, přičemž předchozí strany se do číslování započítávají, ale jejich čísla se nezobrazují"
+    },
+    {
+      "id": "frontmatter.title_page",
+      "definition": "structure.required_sections",
+      "severity": "error",
+      "description": "Titulní list bakalářské práce obsahuje požadované údaje: název univerzity, fakultu, katedru, logo univerzity, typ práce, název práce, jméno autora bez titulů a copyrightovou doložku „© rok odevzdání ČZU v Praze“"
+    },
+    {
+      "id": "frontmatter.declaration",
+      "definition": "declaration.required_content",
+      "severity": "error",
+      "description": "Čestné prohlášení obsahuje prohlášení o samostatném vypracování bakalářské práce a údaj o datu (může být prázdné)"
+    },
+    {
+      "id": "abstract.languages",
+      "definition": "section.abstract.languages",
+      "severity": "error",
+      "description": "Bakalářská práce obsahuje abstrakt v českém i anglickém jazyce"
+    },
+    {
+      "id": "abstract.content",
+      "definition": "section.abstract.required_content",
+      "severity": "error",
+      "description": "Abstrakt obsahuje stručné shrnutí bakalářské práce a neobsahuje informace, které přesahují nebo nejsou podloženy obsahem práce"
+    },
+    {
+      "id": "keywords.count",
+      "definition": "keywords.count",
+      "severity": "error",
+      "description": "Bakalářská práce obsahuje 7 až 10 klíčových slov"
+    },
+    {
+      "id": "language.person_and_voice",
+      "definition": "language.writing_style",
+      "severity": "error",
+      "description": "Text bakalářské práce nepoužívá první osobu jednotného ani množného čísla a je formulován ve třetí osobě nebo v trpném rodě"
+    },
+    {
+      "id": "references.minimum_books_in_assignment",
+      "definition": "references.count",
+      "severity": "error",
+      "description": "Zadání bakalářské práce obsahuje alespoň 5 knižních zdrojů"
+    },
+    {
+      "id": "citations.style",
+      "definition": "citations.style",
+      "severity": "error",
+      "description": "Citace a bibliografické citace jsou zpracovány v souladu s normou ČSN ISO 690:2011, je v celé práci důsledně používán jeden z povolených způsobů zápisu citačních odkazů (forma jméno–datum, forma číselného odkazu nebo průběžné poznámky) a zvolený způsob odpovídá formátu seznamu použitých zdrojů"
+    },
+    {
+      "id": "citations.reference_linking",
+      "definition": "citations.reference_linking",
+      "severity": "error",
+      "description": "Každý zdroj uvedený v seznamu použitých zdrojů v práci je skutečně citován a každý citovaný zdroj je uveden v seznamu použitých zdrojů"
+    },
+
+    {
+      "id": "visuals.source",
+      "definition": "visuals.source",
+      "severity": "error",
+      "description": "Každý obrázek, tabulka nebo graf mají uveden uvedený zdroj pod příslušným objektem a zdroj je zapsán stejným způsobem jako citace v textu"
+    },
+    {
+      "id": "content.methodology_time",
+      "definition": "language.writing_style",
+      "severity": "warning",
+      "description": "Metodika bakalářské práce je formulována v přítomném nebo minulém čase"
+    },
+    {
+      "id": "content.goal_time",
+      "definition": "language.writing_style",
+      "severity": "warning",
+      "description": "Cíl bakalářské práce je formulován v přítomném čase"
+    },
+    {
+      "id": "content.goal_quality",
+      "definition": "content.section_requirements",
+      "severity": "warning",
+      "description": "Cíl bakalářské práce je jednoznačně formulován, je dosažitelný a ověřitelný, není zaměňován za metodu, může být stanoven hlavní cíl spolu s případnými dílčími cíli, nejsou samostatně formulovány cíle teoretické a praktické části a cíl není formulován jako analýza, popis, komparace, charakterizace, přiblížení, nastínění, seznámení čtenáře nebo pochopení"
+    },
+    {
+      "id": "abstract.length",
+      "definition": "section.abstract.length",
+      "severity": "warning",
+      "description": "Rozsah abstraktu nepřesahuje 15 řádků"
+    },
+    {
+      "id": "structure.heading_depth",
+      "definition": "structure.section_depth",
+      "severity": "warning",
+      "description": "Bakalářská práce nepřekračuje tři úrovně členění nadpisů a každá kapitola nebo část rozdělená na podkapitoly obsahuje alespoň dvě podkapitoly"
+    },
+    {
+      "id": "length.main_text",
+      "definition": "length.main_text",
+      "severity": "warning",
+      "description": "Hlavní text bakalářské práce od úvodu po závěr obsahuje alespoň 30 stran a odpovídá doporučenému rozsahu 30–40 stran"
+    },
+    {
+      "id": "references.order",
+      "definition": "references.order",
+      "severity": "warning",
+      "description": "Seznam použitých zdrojů je uspořádán podle zvoleného citačního systému a způsob řazení je v celé práci konzistentní"
+    },
+    {
+      "id": "content.theory_practice_link",
+      "definition": "content.goal_alignment",
+      "severity": "warning",
+      "description": "Teoretická a praktická část bakalářské práce jsou logicky propojeny, teoretická část podporuje praktickou část a cíl práce se promítá do obou částí"
+    },
+    {
+      "id": "content.results_conclusion_alignment",
+      "definition": "content.goal_alignment",
+      "severity": "warning",
+      "description": "Cíle práce jsou v závěru vyhodnoceny, výsledky podporují závěry a závěry jsou formulovány konkrétně"
+    },
+    {
+      "id": "assignment.methodology_time",
+      "definition": "language.writing_style",
+      "severity": "warning",
+      "description": "Metodika uvedená v zadání bakalářské práce je formulována v budoucím čase"
+    },
+    {
+      "id": "title.specificity",
+      "definition": "content.section_requirements",
+      "severity": "recommendation",
+      "description": "Název bakalářské práce stručný, konkrétní a dostatečně odlišující a vyplývá z něj vymezení řešeného tématu, například podle země, regionu, skupiny, organizace nebo jiného relevantního kontextu."
+    },
+    {
+      "id": "references.recency",
+      "definition": "references.source_quality",
+      "severity": "recommendation",
+      "description": "Použité zdroje nejsou starší než 10 let, s výjimkou zdrojů odůvodněných historickým kontextem nebo specifiky tématu"
+    },
+    {
+      "id": "citations.paraphrase_preference",
+      "definition": "citations.direct_quote",
+      "severity": "recommendation",
+      "description": "Při použití přímých citací jsou správně použity uvozovky a uveden odkaz na zdroj. Přímé citace nejsou v práci používány nadměrně a hlavním způsobem práce se zdroji je parafrázování."
+    },
+    {
+      "id": "language.academic_style",
+      "definition": "language.writing_style",
+      "severity": "recommendation",
+      "description": "Jazyk bakalářské práce je odborný a profesionální, jasný a přesný a vyhýbá se první osobě"
+    },
+    {
+      "id": "evaluation.coverage",
+      "definition": "content.section_requirements",
+      "severity": "recommendation",
+      "description": "Bakalářská práce splňuje stanovené požadavky na cíl a metodiku, strukturu práce, používání odborných zdrojů a citací, jazykové zpracování a obsah abstraktu a klíčových slov"
+    },
+    {
+      "id": "tables.caption_size",
+      "definition": "tables.caption_format",
+      "severity": "recommendation",
+      "description": "Titulek tabulky je vysázen písmem o 1–2 body menším, než je základní písmo; lze použít kurzívu nebo bezpatkové písmo"
+    }
+  ],
+  "needInternetRules": [
+    {
+      "id": "integrity.similarity",
+      "definition": "academic_integrity.plagiarism_similarity",
+      "severity": "error",
+      "description": "Kontroluje míru podobnosti bakalářské práce s jinými pracemi a posuzuje ji podle stanovených pravidel: při podobnosti alespoň 15 % s jinou autorskou prací musí vedoucí práce uvést komentář ve svém posudku; podobnost vyšší než 10 % s jinou autorskou prací bez řádného citování je považována za plagiát; podobnost vyšší než 20 % s řádně citovanými zdroji je považována za plagiát z důvodu kompilace ucelených částí textu; podobnost s vlastními dříve publikovanými pracemi se za plagiát nepovažuje, pokud součet těchto podobností nepřekročí 40 %. O tom, zda se jedná o plagiát, rozhoduje státní zkušební komise."
+    },
+    {
+      "id": "references.source_quality",
+      "definition": "references.source_quality",
+      "severity": "recommendation",
+      "description": "Kontroluje kvalitu použitých zdrojů s ohledem na odbornost autorů, aktuálnost zdrojů a doporučení uvedená v zadání práce; skripta by neměla být citována; nežádoucí jsou zdroje s nejasným autorstvím nebo autorem, kterého nelze považovat za odborníka v dané oblasti; zdroje doporučené v zadání BP by měly být v práci využity; cizojazyčné názvy zdrojů se nepřekládají a uvádějí se latinkou; historické zdroje jsou přípustné, pokud jsou odůvodněné kontextem"
+    }
+  ],
+  "tableRules": [
+    {
+      "id": "tables.alignment",
+      "definition": "tables.alignment",
+      "severity": "recommendation",
+      "description": "Text v levém sloupci tabulky je zarovnán vlevo a text v ostatních sloupcích doprostřed; zarovnání do bloku je méně vhodné"
+    },
+    {
+      "id": "tables.caption_size",
+      "definition": "tables.caption_format",
+      "severity": "recommendation",
+      "description": "Titulek tabulky je vysázen písmem o 1–2 body menším, než je základní písmo; lze použít kurzívu nebo bezpatkové písmo"
+    },
+    {
+      "id": "visuals.alignment",
+      "definition": "format.alignment",
+      "severity": "warning",
+      "description": "Obrázky, tabulky a rovnice jsou v bakalářské práci zarovnány na střed"
+    },
+    {
+      "id": "tables.consistency",
+      "definition": "tables.consistency",
+      "severity": "warning",
+      "description": "Grafická úprava tabulek je v celé bakalářské práci jednotná"
+    }
+  ],
+  "tableProbablyAIRules": [
+    {
+      "id": "visuals.requirement",
+      "definition": "visuals.presence",
+      "severity": "error",
+      "description": "Každý obrázek, tabulka, graf nebo příloha použitý v bakalářské práci obsahuje: 1) označení tvořené číslem a stručným, výstižným názvem; 2) uvedení zdroje – citační odkaz na použitý zdroj nebo uvedení vlastních výsledků; 3) odkaz v textu, který objekt propojuje s příslušným slovním komentářem. Použití vizuálních objektů je v textu opodstatněné a odkazy na ně jsou uvedeny na příslušném místě."
+    },
+    {
+      "id": "visuals.numbering",
+      "definition": "visuals.numbering",
+      "severity": "error",
+      "description": "Obrázky, tabulky a grafy jsou v celé bakalářské práci číslovány v samostatných číselných řadách"
+    },
+    {
+      "id": "visuals.caption",
+      "definition": "visuals.caption",
+      "severity": "error",
+      "description": "Obrázky, tabulky a grafy mají povinný popisek umístěný před nebo za příslušným objektem"
+    },
+    {
+      "id": "tables.caption",
+      "definition": "tables.caption",
+      "severity": "error",
+      "description": "Každá tabulka obsahuje titulek s číslem tabulky a názvem vystihujícím její obsah"
+    },
+    {
+      "id": "visuals.text_reference",
+      "definition": "visuals.text_reference",
+      "severity": "error",
+      "description": "Každý obrázek, tabulka nebo graf jsou v textu uvedené, odkaz na něj se nachází v jeho blízkosti"
+    },
+    {
+      "id": "visuals.one_page",
+      "definition": "visuals.page_continuity",
+      "severity": "error",
+      "description": "Název objektu (tabulky, grafu, obrázku atd.), samotný objekt a uvedení zdroje pod objektem jsou umístěny na jedné stránce"
+    },
+    {
+      "id": "tables.no_word_division",
+      "definition": "tables.word_division",
+      "severity": "warning",
+      "description": "V tabulkách se nepoužívá dělení slov"
+    }
+  ]
+}

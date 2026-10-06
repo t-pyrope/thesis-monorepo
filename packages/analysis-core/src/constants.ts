@@ -1,0 +1,1 @@
+export const MAX_ASSIGNMENT_LENGTH = 5_000;
