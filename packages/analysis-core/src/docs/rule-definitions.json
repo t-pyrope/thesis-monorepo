@@ -4,55 +4,31 @@
   "categories": [
     {
       "id": "structure",
-      "name": "Struktura práce"
-    },
-    {
-      "id": "length",
-      "name": "Rozsah práce"
+      "name": "Struktura a formální náležitosti"
     },
     {
       "id": "abstract",
-      "name": "Abstrakt"
-    },
-    {
-      "id": "keywords",
-      "name": "Klíčová slova"
-    },
-    {
-      "id": "formatting",
-      "name": "Formální úprava"
+      "name": "Abstrakt a klíčová slova"
     },
     {
       "id": "language",
       "name": "Jazyk"
     },
     {
-      "id": "citations",
-      "name": "Citace"
-    },
-    {
       "id": "references",
-      "name": "Zdroje a literatura"
+      "name": "Zdroje a citace"
     },
     {
       "id": "visuals",
       "name": "Tabulky a obrázky"
     },
     {
-      "id": "content",
-      "name": "Obsah práce"
-    },
-    {
       "id": "academic_integrity",
       "name": "Akademická integrita"
     },
     {
-      "id": "administrative",
-      "name": "Administrativní požadavky"
-    },
-    {
       "id": "assignment",
-      "name": "Zadání práce"
+      "name": "Obsah a zaměření práce"
     }
   ],
   "rule_definitions": [
@@ -122,7 +98,7 @@
     },
     {
       "id": "length.main_text",
-      "category": "length",
+      "category": "structure",
       "name": "Rozsah hlavního textu",
       "description": "Kontroluje, zda rozsah hlavního textu odpovídá stanovenému limitu.",
       "engine": "numeric_range",
@@ -157,7 +133,7 @@
     },
     {
       "id": "length.norm_page_definition",
-      "category": "length",
+      "category": "structure",
       "name": "Definice normostrany",
       "description": "Definuje počet znaků, který odpovídá jedné normostraně.",
       "engine": "derived_metric",
@@ -236,7 +212,7 @@
     },
     {
       "id": "keywords.count",
-      "category": "keywords",
+      "category": "abstract",
       "name": "Počet klíčových slov",
       "description": "Kontroluje počet klíčových slov.",
       "engine": "count_range",
@@ -255,7 +231,7 @@
     },
     {
       "id": "keywords.title_overlap",
-      "category": "keywords",
+      "category": "abstract",
       "name": "Klíčová slova a název práce",
       "description": "Kontroluje vztah klíčových slov k názvu práce.",
       "engine": "text_similarity",
@@ -269,7 +245,7 @@
     },
     {
       "id": "format.font",
-      "category": "formatting",
+      "category": "structure",
       "name": "Písmo",
       "description": "Kontroluje použitý typ písma.",
       "engine": "document_format",
@@ -283,7 +259,7 @@
     },
     {
       "id": "format.font_size",
-      "category": "formatting",
+      "category": "structure",
       "name": "Velikost písma",
       "description": "Kontroluje velikost písma.",
       "engine": "document_format",
@@ -302,7 +278,7 @@
     },
     {
       "id": "format.line_spacing",
-      "category": "formatting",
+      "category": "structure",
       "name": "Řádkování",
       "description": "Kontroluje řádkování textu.",
       "engine": "document_format",
@@ -316,7 +292,7 @@
     },
     {
       "id": "format.margins",
-      "category": "formatting",
+      "category": "structure",
       "name": "Okraje stránky",
       "description": "Kontroluje nastavení okrajů stránky.",
       "engine": "document_format",
@@ -345,7 +321,7 @@
     },
     {
       "id": "format.page_size",
-      "category": "formatting",
+      "category": "structure",
       "name": "Formát stránky",
       "description": "Kontroluje formát papíru.",
       "engine": "document_format",
@@ -359,7 +335,7 @@
     },
     {
       "id": "format.alignment",
-      "category": "formatting",
+      "category": "structure",
       "name": "Zarovnání textu",
       "description": "Kontroluje zarovnání textu.",
       "engine": "document_format",
@@ -367,7 +343,7 @@
     },
     {
       "id": "format.page_numbering",
-      "category": "formatting",
+      "category": "structure",
       "name": "Číslování stránek",
       "description": "Kontroluje způsob číslování stránek.",
       "engine": "page_numbering",
@@ -408,7 +384,7 @@
     },
     {
       "id": "citations.style",
-      "category": "citations",
+      "category": "references",
       "name": "Citační styl",
       "description": "Kontroluje, zda práce používá požadovaný citační styl.",
       "engine": "citation_style_detection",
@@ -422,7 +398,7 @@
     },
     {
       "id": "citations.consistency",
-      "category": "citations",
+      "category": "references",
       "name": "Konzistence citací",
       "description": "Kontroluje, zda je citační styl používán jednotně v celé práci.",
       "engine": "citation_consistency",
@@ -436,7 +412,7 @@
     },
     {
       "id": "citations.reference_linking",
-      "category": "citations",
+      "category": "references",
       "name": "Propojení citací a seznamu zdrojů",
       "description": "Kontroluje, zda citace odpovídají položkám v seznamu zdrojů a naopak.",
       "engine": "reference_integrity",
@@ -455,7 +431,7 @@
     },
     {
       "id": "citations.direct_quote",
-      "category": "citations",
+      "category": "references",
       "name": "Přímé citace",
       "description": "Kontroluje formátování a požadavky na přímé citace.",
       "engine": "quote_detection",
@@ -625,7 +601,7 @@
     },
     {
       "id": "content.section_requirements",
-      "category": "content",
+      "category": "assignment",
       "name": "Požadavky na obsah části práce",
       "description": "Kontroluje obsah konkrétní části práce podle stanovených požadavků.",
       "engine": "semantic_section_check",
@@ -644,7 +620,7 @@
     },
     {
       "id": "content.goal_alignment",
-      "category": "content",
+      "category": "assignment",
       "name": "Splnění cílů práce",
       "description": "Kontroluje, zda výsledná práce řeší stanovené cíle.",
       "engine": "goal_coverage",
@@ -652,7 +628,7 @@
     },
     {
       "id": "content.methodology_completeness",
-      "category": "content",
+      "category": "assignment",
       "name": "Úplnost metodiky",
       "description": "Kontroluje, zda metodika obsahuje všechny požadované informace.",
       "engine": "semantic_content_check",
@@ -666,7 +642,7 @@
     },
     {
       "id": "content.results_discussion_separation",
-      "category": "content",
+      "category": "assignment",
       "name": "Výsledky a diskuse",
       "description": "Kontroluje oddělení nebo správné rozlišení výsledků a diskuse podle metodických pokynů.",
       "engine": "section_content_classification",
@@ -674,7 +650,7 @@
     },
     {
       "id": "content.conclusion_requirements",
-      "category": "content",
+      "category": "assignment",
       "name": "Požadavky na závěr",
       "description": "Kontroluje, zda závěr obsahuje požadované informace.",
       "engine": "semantic_content_check",
@@ -734,7 +710,7 @@
     },
     {
       "id": "declaration.presence",
-      "category": "administrative",
+      "category": "structure",
       "name": "Přítomnost prohlášení",
       "description": "Kontroluje, zda práce obsahuje požadované autorské prohlášení.",
       "engine": "section_presence",
@@ -742,7 +718,7 @@
     },
     {
       "id": "declaration.required_content",
-      "category": "administrative",
+      "category": "structure",
       "name": "Obsah prohlášení",
       "description": "Kontroluje obsah autorského prohlášení.",
       "engine": "semantic_content_check",
