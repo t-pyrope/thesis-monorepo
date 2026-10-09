@@ -112,7 +112,7 @@ export const checkChapterStartsNewPage = (
   if (!bodyStarted) {
     return {
       valid: false,
-      message: "Nepodařilo se najít začátek hlavní části dokumentu.",
+      message: "nepodařilo se najít začátek hlavní části dokumentu.",
       details: {
         chapters: [],
       },

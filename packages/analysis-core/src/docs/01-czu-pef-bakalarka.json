@@ -119,61 +119,61 @@
     {
       "id": "content.methodology_time",
       "definition": "language.writing_style",
-      "severity": "warning",
-      "description": "Metodika bakalářské práce je formulována v přítomném nebo minulém čase"
+      "severity": "error",
+      "description": "Metodika práce je formulována v přítomném nebo minulém čase a podrobně popisuje postup zpracování a použité metody"
     },
     {
       "id": "content.goal_time",
       "definition": "language.writing_style",
-      "severity": "warning",
-      "description": "Cíl bakalářské práce je formulován v přítomném čase"
+      "severity": "error",
+      "description": "Cíl práce je formulován v přítomném čase"
     },
     {
       "id": "content.goal_quality",
       "definition": "content.section_requirements",
-      "severity": "warning",
-      "description": "Cíl bakalářské práce je jednoznačně formulován, je dosažitelný a ověřitelný, není zaměňován za metodu, může být stanoven hlavní cíl spolu s případnými dílčími cíli, nejsou samostatně formulovány cíle teoretické a praktické části a cíl není formulován jako analýza, popis, komparace, charakterizace, přiblížení, nastínění, seznámení čtenáře nebo pochopení"
+      "severity": "error",
+      "description": "Cíl bakalářské práce je jednoznačně formulován a je dosažitelný; výsledky práce jsou ověřitelné. Cíl není zaměňován za metodu a není formulován jako analýza, popis, komparace, charakterizace, přiblížení, nastínění, seznámení čtenáře nebo pochopení. Nejsou samostatně formulovány cíle teoretické a praktické části"
     },
     {
       "id": "abstract.length",
       "definition": "section.abstract.length",
-      "severity": "warning",
+      "severity": "error",
       "description": "Rozsah abstraktu nepřesahuje 15 řádků"
     },
     {
       "id": "structure.heading_depth",
       "definition": "structure.section_depth",
-      "severity": "warning",
-      "description": "Bakalářská práce nepřekračuje tři úrovně členění nadpisů a každá kapitola nebo část rozdělená na podkapitoly obsahuje alespoň dvě podkapitoly"
+      "severity": "error",
+      "description": "Členění kapitol bakalářské práce nepřesahuje tři úrovně. Každá kapitola nebo podkapitola, která je dále členěna, obsahuje alespoň dvě bezprostředně podřízené podkapitoly"
     },
     {
       "id": "length.main_text",
       "definition": "length.main_text",
-      "severity": "warning",
-      "description": "Hlavní text bakalářské práce od úvodu po závěr obsahuje alespoň 30 stran a odpovídá doporučenému rozsahu 30–40 stran"
+      "severity": "error",
+      "description": "Hlavní textová část bakalářské práce, od kapitoly Úvod po kapitolu Závěr včetně, obsahuje alespoň 30 stran"
     },
     {
       "id": "references.order",
       "definition": "references.order",
-      "severity": "warning",
-      "description": "Seznam použitých zdrojů je uspořádán podle zvoleného citačního systému a způsob řazení je v celé práci konzistentní"
+      "severity": "error",
+      "description": "Seznam použitých zdrojů je řazen podle pravidel zvoleného citačního systému a tato pravidla jsou dodržena v celém seznamu"
     },
     {
       "id": "content.theory_practice_link",
       "definition": "content.goal_alignment",
-      "severity": "warning",
-      "description": "Teoretická a praktická část bakalářské práce jsou logicky propojeny, teoretická část podporuje praktickou část a cíl práce se promítá do obou částí"
+      "severity": "error",
+      "description": "Teoretická a praktická část bakalářské práce jsou logicky provázané a společně přispívají k naplnění cíle práce"
     },
     {
       "id": "content.results_conclusion_alignment",
       "definition": "content.goal_alignment",
-      "severity": "warning",
-      "description": "Cíle práce jsou v závěru vyhodnoceny, výsledky podporují závěry a závěry jsou formulovány konkrétně"
+      "severity": "error",
+      "description": "Závěry bakalářské práce vycházejí ze zjištěných faktů a výsledků práce"
     },
     {
       "id": "assignment.methodology_time",
       "definition": "language.writing_style",
-      "severity": "warning",
+      "severity": "recommendation",
       "description": "Metodika uvedená v zadání bakalářské práce je formulována v budoucím čase"
     },
     {
@@ -243,13 +243,13 @@
     {
       "id": "visuals.alignment",
       "definition": "format.alignment",
-      "severity": "warning",
+      "severity": "error",
       "description": "Obrázky, tabulky a rovnice jsou v bakalářské práci zarovnány na střed"
     },
     {
       "id": "tables.consistency",
       "definition": "tables.consistency",
-      "severity": "warning",
+      "severity": "error",
       "description": "Grafická úprava tabulek je v celé bakalářské práci jednotná"
     }
   ],
@@ -293,7 +293,7 @@
     {
       "id": "tables.no_word_division",
       "definition": "tables.word_division",
-      "severity": "warning",
+      "severity": "error",
       "description": "V tabulkách se nepoužívá dělení slov"
     }
   ]

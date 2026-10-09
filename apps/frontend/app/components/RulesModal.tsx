@@ -39,9 +39,6 @@ const severityColor = (severity: string) => {
     case "error":
       return "error" as const;
 
-    case "warning":
-      return "warning" as const;
-
     case "recommendation":
       return "info" as const;
 
@@ -54,9 +51,6 @@ const severityLabel = (severity: string) => {
   switch (severity) {
     case "error":
       return "Povinné";
-
-    case "warning":
-      return "Upozornění";
 
     case "recommendation":
       return "Doporučení";

@@ -124,10 +124,6 @@ export const ResultItem = ({
                   Výsledek analýzy AI
                 </Typography>
 
-                <Typography component="h4" variant="h5">
-                  Violations
-                </Typography>
-
                 <Typography>{result.ai.summary}</Typography>
 
                 <Stack spacing={2}>
